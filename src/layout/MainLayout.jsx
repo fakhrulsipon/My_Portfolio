@@ -7,7 +7,7 @@ import Hero from '../component/Hero';
 
 const MainLayout = () => {
     return (
-        <div className='bg-cyan-100'>
+        <div className='bg-emerald-100'>
             <Navbar></Navbar>
             <Hero></Hero>
             <About></About>
