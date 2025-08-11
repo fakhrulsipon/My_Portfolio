@@ -11,9 +11,6 @@ const SocialLinks = () => {
                 href: "https://www.linkedin.com/in/yourusername",
                 icon: <FaLinkedin />
             }, {
-                href: "https://twitter.com/yourusername",
-                icon: <FaTwitter />
-            }, {
                 href: "https://facebook.com/yourusername",
                 icon: <FaFacebook />
             }].map(({ href, icon }, idx) => (
