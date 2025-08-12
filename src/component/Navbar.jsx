@@ -1,53 +1,19 @@
-
-import { Link } from 'react-scroll';
+import { FaDownload } from "react-icons/fa";
+import Logo from '../logo/Logo'
 
 const Navbar = () => {
 
-    const commonLinkProps = {
-        smooth: true,
-        duration: 500,
-        offset: -70,
-        activeClass: 'bg-indigo-900 text-yellow-300 font-bold underline rounded-lg shadow-lg',
-        className: 'cursor-pointer text-white hover:text-green-400 hover:bg-white px-4 py-2 rounded-lg transition-all duration-300 shadow-md hover:shadow-xl border border-white',
-    };
+    const Links = <>
+        <li><a href="/#home">Home</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#skills">Skills</a></li>
+        <li><a href="/#projects">Projects</a></li>
+        <li><a href="/#contact">Contact</a></li>
+    </>
 
-
-    const Links = (
-        <>
-            <li>
-                <Link to="home" {...commonLinkProps}>
-                    Home
-                </Link>
-            </li>
-
-            <li>
-                <Link to="skills" {...commonLinkProps}>
-                    Skills
-                </Link>
-            </li>
-
-            <li>
-                <Link to="about" {...commonLinkProps}>
-                    About
-                </Link>
-            </li>
-
-            <li>
-                <Link to="projects" {...commonLinkProps}>
-                    Projects
-                </Link>
-            </li>
-
-            <li>
-                <Link to="contact" {...commonLinkProps}>
-                    Contact
-                </Link>
-            </li>
-        </>
-    )
     return (
-        <div className="navbar bg-gradient-to-r from-green-500 to-indigo-400 shadow-lg sticky top-0 z-50 px-4 md:px-8 lg:px-20">
-            <div className="navbar-start">
+        <div className="navbar fixed top-0 bg-gradient-to-r from-green-500 to-indigo-400 shadow-lg z-50 px-4 md:px-8 lg:px-20">
+            <div className="navbar-start gap-3">
                 {/* Hamburger dropdown for small screens */}
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -64,30 +30,41 @@ const Navbar = () => {
                     </label>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content rounded-lg shadow-lg mt-3 w-56 p-4 gap-3 bg-gradient-to-r from-green-500 to-indigo-400"
+                        className="menu menu-sm dropdown-content rounded-lg shadow-lg mt-4 w-56 p-4 gap-3 bg-gradient-to-r from-green-500 to-indigo-400 text-xl text-white border"
                     >
                         {Links}
                     </ul>
                 </div>
-                <span className=" normal-case text-2xl font-extrabold text-white tracking-wide">
-                    Portfolio
-                </span>
+                
+                <div>
+                    <img className="w-12 h-12" src="/profile-logo.png" alt="" />
+                </div>
             </div>
 
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 space-x-6 text-white font-semibold">
+                <ul className="menu menu-horizontal px-1 space-x-6 text-white font-medium text-xl">
                     {Links}
                 </ul>
             </div>
 
-            <div className="navbar-end">
-                <button className="btn bg-white text-blue-600 font-bold hover:bg-blue-100 transition duration-300">
-                    Get Started
-                </button>
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row items-center gap-6 navbar-end">
+                <div>
+                    <a
+                        href="/resume.pdf"
+                        download="Fakhrul_Islam_Sipon_Resume.pdf"
+                        className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full shadow-lg transition duration-300 font-medium text-xl"
+                    >
+                        <FaDownload className="text-sm" />
+                         Resume
+                    </a>
+                </div>
             </div>
-        </div>
 
-    );
+
+            </div>
+
+            );
 };
 
-export default Navbar;
+            export default Navbar;

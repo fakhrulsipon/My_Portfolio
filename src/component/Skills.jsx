@@ -16,67 +16,79 @@ import {
 
 const Skills = () => {
     const frontendSkills = [
-        { name: "HTML", icon: <FaHtml5 /> },
-        { name: "CSS", icon: <FaCss3Alt /> },
-        { name: "JavaScript", icon: <FaJs /> },
-        { name: "React", icon: <FaReact /> },
-        { name: "Tailwind CSS", icon: <FaCss3Alt /> },
+        { name: "HTML", icon: <FaHtml5 />, color: "bg-orange-500" },
+        { name: "CSS", icon: <FaCss3Alt />, color: "bg-blue-500" },
+        { name: "JavaScript", icon: <FaJs />, color: "bg-yellow-400" },
+        { name: "React", icon: <FaReact />, color: "bg-cyan-400" },
+        { name: "Tailwind CSS", icon: <FaCss3Alt />, color: "bg-teal-400" },
     ];
 
     const backendSkills = [
-        { name: "Node.js", icon: <FaNodeJs /> },
-        { name: "Express.js", icon: <FaCogs /> },
-        { name: "MongoDB", icon: <FaDatabase /> },
-        { name: "JWT Auth", icon: <FaLock /> },
+        { name: "Node.js", icon: <FaNodeJs />, color: "bg-green-500" },
+        { name: "Express.js", icon: <FaCogs />, color: "bg-gray-500" },
+        { name: "MongoDB", icon: <FaDatabase />, color: "bg-green-600" },
+        { name: "JWT Auth", icon: <FaLock />, color: "bg-purple-500" },
     ];
 
     const toolsSkills = [
-        { name: "Git & GitHub", icon: <FaGitAlt /> },
-        { name: "VS Code", icon: <FaCode /> },
-        { name: "Postman", icon: <FaPaperPlane /> },
-        { name: "Figma", icon: <FaFigma /> },
+        { name: "Git & GitHub", icon: <FaGitAlt />, color: "bg-orange-600" },
+        { name: "VS Code", icon: <FaCode />, color: "bg-blue-600" },
+        { name: "Postman", icon: <FaPaperPlane />, color: "bg-orange-400" },
+        { name: "Figma", icon: <FaFigma />, color: "bg-pink-500" },
     ];
 
     const renderSkills = (skillsArray) => (
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-8 justify-center">
             {skillsArray.map((skill, index) => (
-                <button
-                    key={index}
-                    className="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white rounded-full shadow-lg hover:scale-110 transform transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-purple-300"
-                    aria-label={skill.name}
-                    type="button"
-                >
-                    <span className="text-2xl">{skill.icon}</span>
-                    <span className="font-semibold text-lg">{skill.name}</span>
-                </button>
+                <div key={index} className="flex flex-col items-center group">
+                    {/* Icon with background color */}
+                    <div
+                        className={`${skill.color} w-20 h-20 flex items-center justify-center rounded-full text-white text-4xl group-hover:scale-110 transition-transform duration-300`}
+                    >
+                        {skill.icon}
+                    </div>
+                    {/* Name */}
+                    <span className="mt-3 text-white font-medium">{skill.name}</span>
+                </div>
             ))}
         </div>
     );
 
     return (
-        <section id="skills" className="max-w-7xl mx-auto px-4 py-16">
-            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
-                My Skills
-            </h2>
+        <div className="px-4 md:px-8 lg:px-20 mt-8 md:mt-12 lg:mt-16">
+            <div className="max-w-7xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-medium text-center text-white mb-2">
+                    My Skills
+                </h2>
+                <p className="text-gray-400 font-medium text-center mb-10">
+                    Each skill is a part of my learning journey — with them, I build not just projects, but dreams.
+                </p>
 
-            {/* Frontend */}
-            <div className="mb-12">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-6">Frontend</h3>
-                {renderSkills(frontendSkills)}
-            </div>
+                {/* Frontend */}
+                <div className="mb-12">
+                    <h3 className="text-2xl font-medium text-white mb-6 text-center">
+                        Frontend
+                    </h3>
+                    {renderSkills(frontendSkills)}
+                </div>
 
-            {/* Backend */}
-            <div className="mb-12">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-6">Backend</h3>
-                {renderSkills(backendSkills)}
-            </div>
+                {/* Backend */}
+                <div className="mb-12">
+                    <h3 className="text-2xl font-medium text-white mb-6 text-center">
+                        Backend
+                    </h3>
+                    {renderSkills(backendSkills)}
+                </div>
 
-            {/* Tools */}
-            <div className="mb-12">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-6">Tools</h3>
-                {renderSkills(toolsSkills)}
+                {/* Tools */}
+                <div>
+                    <h3 className="text-2xl font-medium text-white mb-6 text-center">
+                        Tools
+                    </h3>
+                    {renderSkills(toolsSkills)}
+                </div>
             </div>
-        </section>
+        </div>
     );
 };
 

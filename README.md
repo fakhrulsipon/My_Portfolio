@@ -1,12 +1,32 @@
-# React + Vite
+# 🌟 Fakhrul Islam Sipon — Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+[![Live Demo](https://img.shields.io/badge/🔗%20Live%20Site-Click%20Here-blue?style=for-the-badge)](https://warm-dango-9b01bb.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Welcome to my personal portfolio! 🚀  
+This is where I showcase my **skills, projects, and professional journey** as a Web Developer.  
+The portfolio is designed to be **responsive, modern, and visually appealing**.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📌 Features
+
+- 🎨 **Modern UI/UX** with Tailwind CSS & DaisyUI
+- 📱 **Fully Responsive** — Mobile, Tablet & Desktop friendly
+- 🖼 **Hero Section** with personal branding
+- 🧑‍💼 **About Me** section with professional details
+- 🛠 **Skills Showcase** with categorized skill tags
+- 💼 **Projects Section** with live preview & source code
+- 📩 **Contact Form** for easy communication
+- 📜 **Resume Download** option
+- ⚡ **Fast Loading** & optimized assets
+
+---
+
+## 🛠 Technologies Used
+
+| Frontend | Styling | Icons & Assets |
+|----------|---------|----------------|
+| React.js | Tailwind CSS | React Icons |
+| React Router | DaisyUI | Heroicons |
+| JavaScript (ES6+) | CSS3 | SVG Assets |
