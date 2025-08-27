@@ -1,95 +1,85 @@
-import React from "react";
-import {
-    FaHtml5,
-    FaCss3Alt,
-    FaJs,
-    FaReact,
-    FaNodeJs,
-    FaGitAlt,
-    FaFigma,
-    FaDatabase,
-    FaLock,
-    FaCode,
-    FaCogs,
-    FaPaperPlane
-} from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGithub, FaFigma } from "react-icons/fa";
+import { SiTailwindcss, SiNextdotjs, SiFirebase, SiMongodb, SiExpress, SiVercel, SiNetlify } from "react-icons/si";
+import Marquee from "react-fast-marquee";
 
-const Skills = () => {
-    const frontendSkills = [
-        { name: "HTML", icon: <FaHtml5 />, color: "bg-orange-500" },
-        { name: "CSS", icon: <FaCss3Alt />, color: "bg-blue-500" },
-        { name: "JavaScript", icon: <FaJs />, color: "bg-yellow-400" },
-        { name: "React", icon: <FaReact />, color: "bg-cyan-400" },
-        { name: "Tailwind CSS", icon: <FaCss3Alt />, color: "bg-teal-400" },
-    ];
+export default function Skills() {
 
-    const backendSkills = [
-        { name: "Node.js", icon: <FaNodeJs />, color: "bg-green-500" },
-        { name: "Express.js", icon: <FaCogs />, color: "bg-gray-500" },
-        { name: "MongoDB", icon: <FaDatabase />, color: "bg-green-600" },
-        { name: "JWT Auth", icon: <FaLock />, color: "bg-purple-500" },
-    ];
 
-    const toolsSkills = [
-        { name: "Git & GitHub", icon: <FaGitAlt />, color: "bg-orange-600" },
-        { name: "VS Code", icon: <FaCode />, color: "bg-blue-600" },
-        { name: "Postman", icon: <FaPaperPlane />, color: "bg-orange-400" },
-        { name: "Figma", icon: <FaFigma />, color: "bg-pink-500" },
-    ];
+  return (
+    <section className="px-4 md:px-8 lg:px-20 mt-8 md:mt-12 lg:mt-16">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-10 text-white">
+          Skills
+        </h2>
 
-    const renderSkills = (skillsArray) => (
-        <div className="flex flex-wrap gap-8 justify-center">
-            {skillsArray.map((skill, index) => (
-                <div key={index} className="flex flex-col items-center group">
-                    {/* Icon with background color */}
-                    <div
-                        className={`${skill.color} w-20 h-20 flex items-center justify-center rounded-full text-white text-4xl group-hover:scale-110 transition-transform duration-300`}
-                    >
-                        {skill.icon}
-                    </div>
-                    {/* Name */}
-                    <span className="mt-3 text-white font-medium">{skill.name}</span>
+
+
+        <div className="p-[2px] rounded-2xl bg-gradient-to-r from-green-300 to-blue-300">
+          <div className="grid grid-cols-1 gap-2 items-center bg-gray-900 rounded-2xl p-6">
+            
+            {/* Marquee Icons */}
+            <div>
+              <Marquee gradient={false} speed={50} direction="right">
+                <div className="flex gap-8 text-6xl my-2">
+                  <FaHtml5 className="text-orange-500" />
+                  <FaCss3Alt className="text-blue-500" />
+                  <SiTailwindcss className="text-sky-400" />
+                  <FaJs className="text-yellow-400" />
+                  <FaReact className="text-cyan-400" />
+                  <SiNextdotjs className="text-white" />
+                  <SiFirebase className="text-yellow-500" />
+                  <FaNodeJs className="text-green-500" />
+                  <SiExpress className="text-gray-300" />
+                  <SiMongodb className="text-green-400" />
+                  <FaGithub className="text-gray-400" />
+                  <SiVercel className="text-white" />
+                  <SiNetlify className="text-sky-500" />
+                  <FaFigma className="text-pink-500" />
                 </div>
-            ))}
-        </div>
-    );
+              </Marquee>
 
-    return (
-        <div className="px-4 md:px-8 lg:px-20 mt-8 md:mt-12 lg:mt-16">
-            <div className="max-w-7xl mx-auto">
-                <h2 className="text-3xl md:text-4xl font-medium text-center text-white mb-2">
-                    My Skills
-                </h2>
-                <p className="text-gray-400 font-medium text-center mb-10">
-                    Each skill is a part of my learning journey — with them, I build not just projects, but dreams.
-                </p>
-
-                {/* Frontend */}
-                <div className="mb-12">
-                    <h3 className="text-2xl font-medium text-white mb-6 text-center">
-                        Frontend
-                    </h3>
-                    {renderSkills(frontendSkills)}
+              <Marquee gradient={false} speed={50}>
+                <div className="flex gap-8 text-6xl my-2">
+                  <FaHtml5 className="text-orange-500" />
+                  <FaCss3Alt className="text-blue-500" />
+                  <SiTailwindcss className="text-sky-400" />
+                  <FaJs className="text-yellow-400" />
+                  <FaReact className="text-cyan-400" />
+                  <SiNextdotjs className="text-white" />
+                  <SiFirebase className="text-yellow-500" />
+                  <FaNodeJs className="text-green-500" />
+                  <SiExpress className="text-gray-300" />
+                  <SiMongodb className="text-green-400" />
+                  <FaGithub className="text-gray-400" />
+                  <SiVercel className="text-white" />
+                  <SiNetlify className="text-sky-500" />
+                  <FaFigma className="text-pink-500" />
                 </div>
-
-                {/* Backend */}
-                <div className="mb-12">
-                    <h3 className="text-2xl font-medium text-white mb-6 text-center">
-                        Backend
-                    </h3>
-                    {renderSkills(backendSkills)}
-                </div>
-
-                {/* Tools */}
-                <div>
-                    <h3 className="text-2xl font-medium text-white mb-6 text-center">
-                        Tools
-                    </h3>
-                    {renderSkills(toolsSkills)}
-                </div>
+              </Marquee>
             </div>
-        </div>
-    );
-};
 
-export default Skills;
+            {/* Skills Text */}
+            <div className="space-y-4 p-4">
+              <p className="text-white">
+                <span className="font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Front-End:</span>{" "}
+                HTML, CSS, Tailwind CSS, JavaScript, React.js, React Router,
+                DaisyUI
+              </p>
+              <p className="text-white">
+                <span className="font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Back-End:</span>{" "}
+                Node.js, Express.js, MongoDB
+              </p>
+              <p className="text-white">
+                <span className="font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Tools:</span> Git,
+                GitHub, VS Code, Netlify, Vercel, Figma
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+  );
+}

@@ -1,6 +1,5 @@
 
 import Navbar from '../component/Navbar';
-
 import About from '../component/About';
 import Skills from '../component/Skills';
 import Hero from '../component/Hero';

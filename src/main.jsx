@@ -6,15 +6,15 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router";
-import MainLayout from './layout/MainLayout';
 import ChatOrbit from './page/ChatOrbit';
 import Gardeniahub from './page/Gardeniahub';
 import CourseManagement from './page/CourseManagement';
+import AppWrapper from './appWraper/AppWrapper';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout></MainLayout>,
+    element: <AppWrapper></AppWrapper>,
   },
   {
     path: '/chatorbit',

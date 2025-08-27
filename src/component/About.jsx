@@ -1,7 +1,21 @@
-import React from 'react';
+
 import aboutLottie from '../assets/about.json'
 import Lottie from 'lottie-react';
 const About = () => {
+    const customCss = `
+    @property --angle {
+      syntax: '<angle>';
+      initial-value: 0deg;
+      inherits: false;
+    }
+
+    @keyframes shimmer-spin {
+      to {
+        --angle: 360deg;
+      }
+    }
+  `;
+
     return (
         <div className='lg:flex lg:justify-center lg:items-center lg:mt-16 md:mt-12 mt-8 px-4 md:px-8 lg:px-20'>
 
@@ -22,27 +36,34 @@ const About = () => {
                     <span className="font-semibold"> Introvert with an Extroverted Heart |</span>
                 </p>
 
-                {/* Article about you */}
-                <article className="space-y-4 text-base leading-relaxed text-gray-300">
-                    <p>
-                        Hey there! I’m <span className="font-semibold text-teal-400">Fakhrul Islam Sipon</span>,
-                        a passionate <span className="font-semibold text-teal-400">MERN stack developer</span> who loves
-                        to transform ideas into digital experiences. My journey in web development started with curiosity
-                        and has grown into a deep passion for crafting beautiful interfaces and robust backend systems.
-                    </p>
-                    <p>
-                        When I’m not coding, you can find me playing football, exploring digital art, or listening
-                        to music to recharge my creativity. I believe in continuous growth and staying updated with the latest tech trends.
-                    </p>
-                    <p>
-                        I’m always excited to work on projects that challenge me to think differently and collaborate with
-                        like-minded people. Problem-solving isn’t just part of my job — it’s what drives me every day.
-                    </p>
-                    <p>
-                        My ultimate goal is to build meaningful projects that not only solve problems but also inspire people.
-                        Every line of code I write is aimed at delivering quality, efficiency, and creativity.
-                    </p>
-                </article>
+                <div className="relative p-1 rounded-xl inline-block w-full max-w-md mx-auto">
+                    <style>{customCss}</style>
+
+                    {/* Shimmer border */}
+                    <div
+                        className="absolute inset-0 rounded-xl pointer-events-none"
+                        style={{
+                            background: `conic-gradient(from var(--angle), transparent 25%, #22d3ee 50%, #a78bfa 75%, transparent 100%)`,
+                            animation: "shimmer-spin 3s linear infinite",
+                            mask: `radial-gradient(farthest-side, black calc(100% - 4px), transparent 100%)`,
+                            WebkitMask: `radial-gradient(farthest-side, black calc(100% - 4px), transparent 100%)`,
+                            filter: "blur(4px)",
+                        }}
+                    />
+
+                    {/* Card content */}
+                    <div className="relative bg-gray-900 rounded-xl p-6 space-y-3 text-gray-300">
+                        <p>
+                            Hey! I’m <span className="font-semibold ">Fakhrul Islam Sipon</span>, a
+                            passionate <span className="font-semibold">MERN stack developer</span> who
+                            loves turning ideas into digital experiences.
+                        </p>
+                        <p>
+                            Outside coding, I enjoy football, digital art, and music. I love solving problems and
+                            building projects that inspire.
+                        </p>
+                    </div>
+                </div>
 
             </div>
 
