@@ -49,8 +49,8 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                <div className="flex items-center">
-                    <img className="w-14 h-14 rounded-full" src="/img-logo.jpg" alt="" />
+                <div className="flex items-center gap-2">
+                    <img className="w-12 h-12 rounded-full" src="/logo.jpg" alt="" />
                     <h1 className="text-white text-3xl font-semibold hidden md:block">Sipon</h1>
                 </div>
             </div>

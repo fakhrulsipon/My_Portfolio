@@ -30,7 +30,7 @@ const Project1 = () => {
 
                             {/* Tools / Tech Icons */}
                             <div className="flex flex-wrap gap-3 mb-4 mt-4">
-                                {["React", "JavaScript", "Node", "Express", "Tailwind"].map((tech, index) => (
+                                {["React.js", "JavaScript", "Node.js", "Express.js", "Tailwind CSS", "MongoDB", "Stripe", "Firebase Auth", "JWT"].map((tech, index) => (
                                     <button
                                         key={index}
                                         className="px-3 py-1 rounded-lg text-sm sm:text-base font-medium text-white 

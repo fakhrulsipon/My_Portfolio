@@ -24,12 +24,12 @@ const About = () => {
                 <Lottie animationData={aboutLottie} loop={true} style={{ width: '100%', height: '100%' }} />
             </div>
             <div className="flex-1 text-gray-300">
-                <h1 className="text-3xl md:text-4xl font-medium my-4 text-white tracking-wide">
+                <h1 className="text-3xl md:text-4xl font-medium my-4 text-gray-200 tracking-wide">
                     Meet Sipon
                 </h1>
 
                 {/* Short Intro */}
-                <p className="mb-6 text-lg leading-relaxed text-white">
+                <p className="mb-6 text-lg leading-relaxed text-gray-200">
                     <span className="font-semibold">MERN Stack Developer 🚀</span> |
                     <span className="font-semibold"> Forever Curious Learner 📚</span> |
                     <span className="font-semibold"> Adventurous Soul 🌍</span> |
@@ -52,7 +52,7 @@ const About = () => {
                     />
 
                     {/* Card content */}
-                    <div className="relative bg-gray-900 rounded-xl p-6 space-y-3 text-gray-300">
+                    <div className="relative bg-white rounded-xl p-6 space-y-3 text-gray-600">
                         <p>
                             Hey! I’m <span className="font-semibold ">Fakhrul Islam Sipon</span>, a
                             passionate <span className="font-semibold">MERN stack developer</span> who
