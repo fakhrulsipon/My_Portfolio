@@ -16,7 +16,10 @@ export default function ShimmerBorder({ children, borderWidth = 6 }) {
   `;
 
   return (
-    <div className="relative rounded-full inline-block" style={{ padding: borderWidth }}>
+    <div
+      className="relative rounded-full inline-block"
+      style={{ padding: borderWidth }}
+    >
       <style>{customCss}</style>
 
       {/* Shimmer border */}
