@@ -25,11 +25,6 @@ const Project1 = () => {
                 Discussion Forum
               </h2>
 
-              <h2 className="text-2xl font-semibold text-white mb-4 tracking-wider">
-                <span className="text-2xl font-bold">Chatorbit</span> - Modern
-                Discussion Forum
-              </h2>
-
               <p className="text-white">
                 ChatOrbit is a modern community forum where users can post,
                 comment, vote, and become premium members. Built with the MERN
