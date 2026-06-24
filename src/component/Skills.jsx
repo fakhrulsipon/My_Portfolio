@@ -20,18 +20,18 @@ import Marquee from "react-fast-marquee";
 
 export default function Skills() {
   return (
-    <section className="px-4 md:px-8 lg:px-20 mt-8 md:mt-12 lg:mt-16">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-10 text-white">
+    <section className="section-shell pt-16 md:pt-20 lg:pt-24">
+      <div className="section-container">
+        <h2 className="mb-10 text-center text-4xl font-semibold tracking-tight text-white md:text-5xl">
           Skills
         </h2>
 
-        <div className="p-[2px] rounded-2xl bg-gradient-to-r from-green-300 to-blue-300">
-          <div className="grid grid-cols-1 gap-2 items-center bg-gray-900 rounded-2xl p-6">
+        <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-emerald-300/20 via-cyan-300/10 to-violet-300/20 p-[1px] shadow-2xl shadow-black/30">
+          <div className="premium-card grid grid-cols-1 items-center gap-8 overflow-hidden rounded-[2rem] p-6 md:p-8">
             {/* Marquee Icons */}
-            <div>
+            <div className="rounded-3xl border border-white/10 bg-slate-950/50 py-4">
               <Marquee gradient={false} speed={50} direction="right">
-                <div className="flex gap-8 text-6xl my-2">
+                <div className="my-2 flex gap-8 text-5xl md:text-6xl">
                   <FaHtml5 className="text-orange-500" />
                   <FaCss3Alt className="text-blue-500" />
                   <SiTailwindcss className="text-sky-400" />
@@ -50,7 +50,7 @@ export default function Skills() {
               </Marquee>
 
               <Marquee gradient={false} speed={50}>
-                <div className="flex gap-8 text-6xl my-2">
+                <div className="my-2 flex gap-8 text-5xl md:text-6xl">
                   <FaHtml5 className="text-orange-500" />
                   <FaCss3Alt className="text-blue-500" />
                   <SiTailwindcss className="text-sky-400" />
@@ -70,25 +70,24 @@ export default function Skills() {
             </div>
 
             {/* Skills Text */}
-            <div className="space-y-4 p-4">
-              <p className="text-white">
-                <span className="font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            <div className="grid gap-4 p-1 md:grid-cols-3 md:p-4">
+              <p className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 leading-7 text-slate-200 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.07]">
+                <span className="font-bold bg-gradient-to-r from-emerald-300 via-cyan-300 to-violet-300 bg-clip-text text-transparent">
                   Front-End:
                 </span>{" "}
-                HTML, CSS, Tailwind CSS, JavaScript, React.js, React Router,
-                DaisyUI
+              TypeScript, Next.js, JavaScript, React.js, HTML, CSS, Tailwind CSS, shadcn/ui 
               </p>
-              <p className="text-white">
-                <span className="font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              <p className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 leading-7 text-slate-200 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.07]">
+                <span className="font-bold bg-gradient-to-r from-emerald-300 via-cyan-300 to-violet-300 bg-clip-text text-transparent">
                   Back-End:
                 </span>{" "}
-                Node.js, Express.js, MongoDB
+                Nestjs, Node.js, Express.js, Prisma, PostgreSQL, MongoDB
               </p>
-              <p className="text-white">
-                <span className="font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              <p className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 leading-7 text-slate-200 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.07]">
+                <span className="font-bold bg-gradient-to-r from-emerald-300 via-cyan-300 to-violet-300 bg-clip-text text-transparent">
                   Tools:
                 </span>{" "}
-                Git, GitHub, VS Code, Netlify, Vercel, Figma
+                Git, GitHub, VS Code, Postman, Netlify, Vercel, Figma
               </p>
             </div>
           </div>

@@ -18,29 +18,29 @@ const Navbar = () => {
   const Links = (
     <>
       <li>
-        <a href="/#home">Home</a>
+        <a className="rounded-full px-4 py-2 text-sm transition hover:bg-white/10 hover:text-cyan-200" href="/#home">Home</a>
       </li>
       <li>
-        <a href="/#about">About</a>
+        <a className="rounded-full px-4 py-2 text-sm transition hover:bg-white/10 hover:text-cyan-200" href="/#about">About</a>
       </li>
       <li>
-        <a href="/#skills">Skills</a>
+        <a className="rounded-full px-4 py-2 text-sm transition hover:bg-white/10 hover:text-cyan-200" href="/#skills">Skills</a>
       </li>
       <li>
-        <a href="/#projects">Projects</a>
+        <a className="rounded-full px-4 py-2 text-sm transition hover:bg-white/10 hover:text-cyan-200" href="/#projects">Projects</a>
       </li>
       <li>
-        <a href="/#contact">Contact</a>
+        <a className="rounded-full px-4 py-2 text-sm transition hover:bg-white/10 hover:text-cyan-200" href="/#contact">Contact</a>
       </li>
     </>
   );
 
   return (
-    <div className="navbar fixed top-0 bg-gray-900 z-50 px-4 md:px-8 lg:px-20">
+    <div className="navbar fixed top-0 z-50 border-b border-white/10 bg-slate-950/70 px-4 shadow-[0_10px_40px_rgba(0,0,0,0.22)] backdrop-blur-xl md:px-8 lg:px-20">
       <div className="navbar-start gap-3">
         {/* Hamburger dropdown for small screens */}
         <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
+          <label tabIndex={0} className="btn btn-ghost rounded-full border border-white/10 bg-white/5 lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 text-white"
@@ -58,22 +58,22 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content rounded-lg shadow-lg mt-4 w-56 p-4 gap-3 bg-gradient-to-r from-green-500 to-indigo-400 text-xl text-white border"
+            className="menu menu-sm dropdown-content mt-4 w-56 gap-2 rounded-2xl border border-white/10 bg-slate-950/95 p-4 text-white shadow-2xl backdrop-blur-xl"
           >
             {Links}
           </ul>
         </div>
 
         <div className="flex items-center gap-2">
-          <img className="w-12 h-12 rounded-full" src="/logo.jpg" alt="" />
-          <h1 className="text-white text-3xl font-semibold hidden md:block">
+          <img className="h-11 w-11 rounded-full border border-white/15 object-cover shadow-lg shadow-cyan-950/30" src="/logo.jpg" alt="" />
+          <h1 className="hidden text-3xl font-semibold tracking-tight text-white md:block">
             Sipon
           </h1>
         </div>
       </div>
 
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 space-x-6 text-white font-medium">
+        <ul className="menu menu-horizontal rounded-full border border-white/10 bg-white/[0.04] px-2 text-white/90 shadow-inner shadow-white/5">
           {Links}
         </ul>
       </div>
@@ -86,7 +86,7 @@ const Navbar = () => {
           <a
             href="/Resume.pdf"
             download="Fakhrul_Islam_Sipon_Resume.pdf"
-            className="relative inline-flex items-center justify-center p-[2px] rounded-full overflow-hidden group shadow-lg"
+            className="group relative inline-flex items-center justify-center overflow-hidden rounded-full p-[1px] shadow-lg shadow-cyan-950/30 focus-ring"
           >
             {/* Shimmer Background */}
             <div
@@ -98,7 +98,7 @@ const Navbar = () => {
               }}
             />
             {/* Button Content */}
-            <span className="relative z-10 flex items-center gap-2 px-8 py-3 bg-gray-800 text-white rounded-full group-hover:bg-gray-700 transition-colors duration-300 font-medium">
+            <span className="relative z-10 flex items-center gap-2 rounded-full bg-slate-950 px-6 py-2.5 text-sm font-semibold text-white transition duration-300 group-hover:bg-slate-900 group-hover:text-cyan-100 sm:px-8 sm:py-3">
               <FaDownload className="text-lg" />
               Resume
             </span>

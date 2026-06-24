@@ -38,31 +38,32 @@ const ContactForm = () => {
     };
 
     return (
-        <div className='lg:mt-16 md:mt-12 mt-8 px-4 md:px-8 lg:px-20'>
+        <div className='section-shell py-16 md:py-20 lg:py-24'>
+            <div className="section-container">
 
-            <h2 className="text-3xl md:text-4xl font-medium text-white text-center mb-2">
+            <h2 className="mb-2 text-center text-4xl font-medium tracking-tight text-white md:text-5xl">
                 Get In Touch
             </h2>
-            <p className="mt-3 text-gray-400 text-center mb-6">
+            <p className="mx-auto mb-10 mt-4 max-w-2xl text-center leading-7 text-slate-400">
                 Have questions or want to work together? Fill out the form below and I’ll get back to you as soon as possible.
             </p>
 
-            <div className='lg:flex justify-center items-center'>
+            <div className='premium-card grid items-center gap-8 rounded-[2rem] p-5 md:p-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12'>
 
-                <div className="w-full flex-1">
+                <div className="w-full">
                     <Lottie animationData={contactLottie} loop={true} style={{ width: '100%', height: '100%' }} />
                 </div>
 
                 {/* contact-form */}
-                <div className="flex items-center justify-center flex-1">
-                    <form ref={form} onSubmit={sendEmail} className="w-full max-w-lg space-y-4">
+                <div className="flex items-center justify-center">
+                    <form ref={form} onSubmit={sendEmail} className="w-full max-w-xl space-y-4">
                         {/* Name */}
                         <input
                             type="text"
                             name="name"
                             placeholder="Your Name*"
                             autoComplete="off"
-                            className="w-full px-4 py-3 bg-transparent border border-green-400 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
+                            className="w-full rounded-2xl border border-white/10 bg-white/[0.055] px-4 py-3.5 text-white placeholder-slate-400 transition duration-300 focus:border-cyan-300/50 focus:bg-white/[0.08] focus:outline-none focus:ring-2 focus:ring-cyan-300/20"
                             required
                         />
 
@@ -72,7 +73,7 @@ const ContactForm = () => {
                             name="email"
                             autoComplete="off"
                             placeholder="Your Email*"
-                            className="w-full px-4 py-3 bg-transparent border border-green-400 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
+                            className="w-full rounded-2xl border border-white/10 bg-white/[0.055] px-4 py-3.5 text-white placeholder-slate-400 transition duration-300 focus:border-cyan-300/50 focus:bg-white/[0.08] focus:outline-none focus:ring-2 focus:ring-cyan-300/20"
                             required
                         />
 
@@ -81,7 +82,7 @@ const ContactForm = () => {
                             name="message"
                             placeholder="Your message*"
                             rows="5"
-                            className="w-full px-4 py-3 bg-transparent border border-green-400 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
+                            className="w-full rounded-2xl border border-white/10 bg-white/[0.055] px-4 py-3.5 text-white placeholder-slate-400 transition duration-300 focus:border-cyan-300/50 focus:bg-white/[0.08] focus:outline-none focus:ring-2 focus:ring-cyan-300/20"
                             required
                         ></textarea>
 
@@ -89,12 +90,13 @@ const ContactForm = () => {
                         <button
                             type="submit"
                             value='send'
-                            className="w-full px-4 py-3 border border-green-400 text-green-400 rounded-md hover:bg-green-700 hover:text-white font-semibold transition-colors"
+                            className="w-full rounded-2xl border border-cyan-300/40 bg-cyan-300/10 px-4 py-3.5 font-semibold text-cyan-100 shadow-lg shadow-cyan-950/30 transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-300/20 hover:text-white focus-ring"
                         >
                             SUBMIT
                         </button>
                     </form>
                 </div>
+            </div>
             </div>
 
         </div>

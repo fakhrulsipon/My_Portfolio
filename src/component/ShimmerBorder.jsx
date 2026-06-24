@@ -26,16 +26,16 @@ export default function ShimmerBorder({ children, borderWidth = 6 }) {
       <div
         className="absolute inset-0 rounded-full pointer-events-none"
         style={{
-          background: `conic-gradient(from var(--angle), transparent 25%, #22d3ee 50%, #a78bfa 75%, transparent 100%)`,
-          animation: "shimmer-spin 3s linear infinite",
+          background: `conic-gradient(from var(--angle), transparent 18%, #34d399 38%, #22d3ee 56%, #a78bfa 76%, transparent 100%)`,
+          animation: "shimmer-spin 5s linear infinite",
           mask: `radial-gradient(farthest-side, black calc(100% - ${borderWidth}px), transparent 100%)`,
           WebkitMask: `radial-gradient(farthest-side, black calc(100% - ${borderWidth}px), transparent 100%)`,
-          filter: "blur(4px)", // Glowy effect
+          filter: "blur(5px)",
         }}
       />
 
       {/* Inner content */}
-      <div className="relative rounded-full overflow-hidden bg-gray-900">
+      <div className="relative overflow-hidden rounded-full bg-slate-950 shadow-2xl shadow-black/40">
         {children}
       </div>
     </div>

@@ -7,39 +7,35 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="text-white pb-8 lg:mt-16 md:mt-12 mt-8 px-4 md:px-8 lg:px-20">
-      <div className="max-w-7xl mx-auto text-center">
+    <footer className="section-shell pb-8 pt-4 text-white">
+      <div className="section-container text-center">
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-medium text-white mb-6">
+        <h2 className="mb-8 text-4xl font-medium tracking-tight text-white md:text-5xl">
           Contact Information
         </h2>
 
         {/* Contact Cards */}
-        <div className="max-w-6xl mx-auto grid gap-6 grid-cols-1 sm:grid-cols-1 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-5 lg:grid-cols-2">
           {/* Email */}
           <div
-            className="bg-white/10 backdrop-blur-md border border-white/20 shadow-lg 
-                        rounded-2xl p-6 flex items-center gap-4 hover:shadow-green-400/40 
-                        transition-all duration-300 hover:-translate-y-1"
+            className="premium-card flex items-center gap-4 rounded-3xl p-6 text-left transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.075]"
           >
-            <div className="bg-green-100 p-4 rounded-full shadow-inner">
-              <FaEnvelope className="text-green-600 text-2xl" />
+            <div className="rounded-full border border-cyan-300/20 bg-cyan-300/10 p-4 shadow-inner">
+              <FaEnvelope className="text-2xl text-cyan-200" />
             </div>
-            <span className="font-semibold text-base md:text-lg text-gray-100">
+            <span className="break-all text-base font-semibold text-slate-100 md:text-lg">
               fakhrulislamsipon@gmail.com
             </span>
           </div>
 
           {/* Phone */}
           <div
-            className="bg-white/10 backdrop-blur-md border border-white/20 shadow-lg 
-                        rounded-2xl p-6 flex items-center gap-4 hover:shadow-green-400/40 
-                        transition-all duration-300 hover:-translate-y-1"
+            className="premium-card flex items-center gap-4 rounded-3xl p-6 text-left transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.075]"
           >
-            <div className="bg-green-100 p-4 rounded-full shadow-inner">
-              <FaPhoneAlt className="text-green-600 text-2xl" />
+            <div className="rounded-full border border-emerald-300/20 bg-emerald-300/10 p-4 shadow-inner">
+              <FaPhoneAlt className="text-2xl text-emerald-200" />
             </div>
-            <span className="font-semibold text-base md:text-lg text-gray-100">
+            <span className="text-base font-semibold text-slate-100 md:text-lg">
               +8801823461697
             </span>
           </div>
@@ -49,35 +45,31 @@ const Footer = () => {
             href="https://wa.me/8801823461697"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white/10 backdrop-blur-md border border-white/20 shadow-lg 
-                     rounded-2xl p-6 flex items-center gap-4 hover:shadow-green-400/40 
-                     transition-all duration-300 hover:-translate-y-1"
+            className="premium-card flex items-center gap-4 rounded-3xl p-6 text-left transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.075] focus-ring"
           >
-            <div className="bg-green-100 p-4 rounded-full shadow-inner">
-              <FaWhatsapp className="text-green-600 text-2xl" />
+            <div className="rounded-full border border-emerald-300/20 bg-emerald-300/10 p-4 shadow-inner">
+              <FaWhatsapp className="text-2xl text-emerald-200" />
             </div>
-            <span className="font-semibold text-base md:text-lg text-gray-100">
+            <span className="text-base font-semibold text-slate-100 md:text-lg">
               +8801823461697
             </span>
           </a>
 
           {/* Location */}
           <div
-            className="bg-white/10 backdrop-blur-md border border-white/20 shadow-lg 
-                        rounded-2xl p-6 flex items-center gap-4 hover:shadow-green-400/40 
-                        transition-all duration-300 hover:-translate-y-1"
+            className="premium-card flex items-center gap-4 rounded-3xl p-6 text-left transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.075]"
           >
-            <div className="bg-green-100 p-4 rounded-full shadow-inner">
-              <FaMapMarkerAlt className="text-green-600 text-2xl" />
+            <div className="rounded-full border border-violet-300/20 bg-violet-300/10 p-4 shadow-inner">
+              <FaMapMarkerAlt className="text-2xl text-violet-200" />
             </div>
-            <span className="font-semibold text-base md:text-lg text-gray-100">
+            <span className="text-base font-semibold text-slate-100 md:text-lg">
               Dhaka, Bangladesh
             </span>
           </div>
         </div>
 
         {/* Footer bottom */}
-        <div className="mt-8 border-t border-gray-700 pt-4 text-gray-400 text-sm">
+        <div className="mt-8 border-t border-white/10 pt-5 text-sm text-slate-500">
           © {new Date().getFullYear()} Fakhrul Islam Sipon. All rights reserved.
         </div>
       </div>

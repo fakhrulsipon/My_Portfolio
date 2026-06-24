@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion as Motion, AnimatePresence } from "framer-motion";
 import MainLayout from "../layout/MainLayout";
 
 const AppWrapper = () => {
@@ -49,7 +49,7 @@ const AppWrapper = () => {
   return (
     <AnimatePresence mode="wait">
       {isLoading ? (
-        <motion.div
+        <Motion.div
           key="loader"
           className="flex flex-col items-center justify-center h-screen bg-gradient-to-b from-black via-gray-950 to-black text-white px-4"
           initial={{ opacity: 0 }}
@@ -58,7 +58,7 @@ const AppWrapper = () => {
           transition={{ duration: 0.8, ease: "easeInOut" }}
         >
           {/* Typewriter Text (smaller clean) */}
-          <motion.h1
+          <Motion.h1
             className="text-center font-medium mb-10 text-lg sm:text-xl md:text-2xl 
               bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 
               bg-clip-text text-transparent"
@@ -68,7 +68,7 @@ const AppWrapper = () => {
           >
             {typed}
             {showCursor && (
-              <motion.span
+              <Motion.span
                 aria-hidden="true"
                 className="inline-block ml-1 align-middle text-white font-bold"
                 animate={{ opacity: [1, 0, 1] }}
@@ -79,19 +79,19 @@ const AppWrapper = () => {
                 }}
               >
                 |
-              </motion.span>
+              </Motion.span>
             )}
-          </motion.h1>
+          </Motion.h1>
 
           {/* Eye-Catching Glow Loader */}
-          <motion.div
+          <Motion.div
             className="relative flex items-center justify-center"
             initial={{ scale: 0.85, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
             {/* Pulse Glow Background */}
-            <motion.div
+            <Motion.div
               className="absolute w-24 h-24 rounded-full bg-gradient-to-r from-cyan-400 to-purple-600 opacity-30 blur-xl"
               animate={{ scale: [1, 1.4, 1] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -109,7 +109,7 @@ const AppWrapper = () => {
                 fill="none"
               />
               {/* Animated Outer Ring */}
-              <motion.circle
+              <Motion.circle
                 cx="40"
                 cy="40"
                 r="32"
@@ -126,7 +126,7 @@ const AppWrapper = () => {
                 style={{ transformOrigin: "50% 50%" }}
               />
               {/* Inner Rotating Ring */}
-              <motion.circle
+              <Motion.circle
                 cx="40"
                 cy="40"
                 r="24"
@@ -155,24 +155,24 @@ const AppWrapper = () => {
             </svg>
 
             {/* Percentage */}
-            <motion.span
+            <Motion.span
               className="absolute text-sm font-semibold text-cyan-300"
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 1, repeat: Infinity }}
             >
               {progress}%
-            </motion.span>
-          </motion.div>
-        </motion.div>
+            </Motion.span>
+          </Motion.div>
+        </Motion.div>
       ) : (
-        <motion.div
+        <Motion.div
           key="main"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           <MainLayout />
-        </motion.div>
+        </Motion.div>
       )}
     </AnimatePresence>
   );

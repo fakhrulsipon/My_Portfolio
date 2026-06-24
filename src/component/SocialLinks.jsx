@@ -13,14 +13,14 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className="flex justify-center md:justify-start items-center gap-6 p-3 rounded-xl">
+    <div className="flex items-center justify-center gap-4 rounded-xl p-3 md:justify-start">
       {links.map(({ href, icon }, idx) => (
-        <ShimmerBorder key={idx} borderWidth={3}>
+        <ShimmerBorder key={idx} borderWidth={2}>
           <a
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-12 h-12 flex items-center justify-center bg-gray-900 text-white rounded-full hover:bg-gray-700 transition-colors duration-300 text-xl"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-slate-950 text-xl text-white transition duration-300 hover:-translate-y-0.5 hover:bg-slate-900 hover:text-cyan-200 focus-ring"
             aria-label="social link"
           >
             {icon}

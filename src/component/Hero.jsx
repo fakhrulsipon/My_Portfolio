@@ -3,6 +3,7 @@ import image from "../assets/portfolio.png";
 import SocialLinks from "../component/SocialLinks";
 import { Typewriter } from "react-simple-typewriter";
 import ShimmerBorder from "./ShimmerBorder";
+import { motion as Motion } from "framer-motion";
 
 const Hero = () => {
   const customCss = `
@@ -20,20 +21,26 @@ const Hero = () => {
   `;
 
   return (
-    <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 md:mt-12 mt-8 lg:mt-16 px-4 md:px-8 lg:px-20">
+    <div className="section-shell">
+      <div className="section-container flex min-h-[calc(100vh-5rem)] flex-col-reverse items-center justify-between gap-12 py-14 md:py-20 lg:flex-row lg:gap-16">
       {/* Left Side - Text */}
-      <div className="flex-1 text-center md:text-left">
-        <h1 className="text-2xl font-medium text-white leading-tight">
+      <Motion.div
+        className="flex-1 text-center md:text-left"
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        <h1 className="text-xl font-medium leading-tight text-cyan-200 md:text-2xl">
           Hello, It's Me
         </h1>
-        <h1 className="text-4xl font-medium text-white leading-tight mt-2">
+        <h1 className="mt-3 text-5xl font-medium leading-[0.98] tracking-tight text-white sm:text-6xl lg:text-7xl">
           Fakhrul Islam Sipon
         </h1>
-        <p className="text-lg lg:text-2xl font-medium text-white mt-2">
+        <p className="mt-5 text-xl font-medium text-slate-100 lg:text-2xl">
           And I'm a{" "}
-          <span className="text-xl lg:text-3xl font-semibold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+          <span className="text-2xl font-semibold bg-gradient-to-r from-emerald-300 via-cyan-300 to-violet-300 bg-clip-text text-transparent lg:text-3xl">
             <Typewriter
-              words={["Web Developer"]}
+              words={["Full Stack Developer"]}
               loop={false}
               cursor
               cursorStyle="|"
@@ -45,20 +52,20 @@ const Hero = () => {
           {/* implement typewriter */}
         </p>
 
-        <p className="text-gray-300 mt-4 max-w-lg">
-          I am a Passionate Web Developer skilled in building modern,
+        <p className="mx-auto mt-6 max-w-xl text-base leading-8 text-slate-300 md:mx-0 md:text-lg">
+          I am a Passionate Full Stack Developer skilled in building modern,
           responsive, and user-friendly websites. Experienced in frontend
           design, web app development, and creative UI/UX solutions......
         </p>
 
-        <div className="md:flex justify-start items-center mt-6">
+        <div className="mt-8 items-center justify-center gap-4 md:flex md:justify-start">
           {/* Buttons */}
           <div className="flex items-center justify-center">
             <style>{customCss}</style>
             <a
               href="/Resume.pdf"
               download="Fakhrul_Islam_Sipon_Resume.pdf"
-              className="relative inline-flex items-center justify-center p-[2px] rounded-full overflow-hidden group shadow-lg"
+              className="group relative inline-flex items-center justify-center overflow-hidden rounded-full p-[1px] shadow-2xl shadow-cyan-950/40 focus-ring"
             >
               {/* Shimmer Background */}
               <div
@@ -70,7 +77,7 @@ const Hero = () => {
                 }}
               />
               {/* Button Content */}
-              <span className="relative z-10 flex items-center gap-2 px-8 py-3 bg-gray-800 text-white rounded-full group-hover:bg-gray-700 transition-colors duration-300 font-medium">
+              <span className="relative z-10 flex items-center gap-2 rounded-full bg-slate-950 px-8 py-3 font-semibold text-white transition duration-300 group-hover:bg-slate-900 group-hover:text-cyan-100">
                 <FaDownload className="text-lg" />
                 Resume
               </span>
@@ -81,19 +88,28 @@ const Hero = () => {
             <SocialLinks></SocialLinks>
           </div>
         </div>
-      </div>
+      </Motion.div>
 
       {/* Right Side - Image */}
-      <div className="flex-1 flex justify-center md:justify-end">
+      <Motion.div
+        className="flex flex-1 justify-center md:justify-end"
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.12 }}
+      >
         <div className="relative">
+          <div className="absolute -inset-8 rounded-full bg-cyan-300/10 blur-3xl" />
+          <div className="absolute -right-8 top-10 h-28 w-28 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-md" />
+          <div className="absolute -bottom-6 -left-6 h-20 w-20 rounded-full border border-emerald-300/20 bg-emerald-300/10 backdrop-blur-md" />
           <ShimmerBorder>
             <img
               src={image}
               alt="profile"
-              className="w-full h-full object-cover rounded-full bg-gray-900 p-4"
+              className="h-full w-full rounded-full bg-slate-950 object-cover p-4"
             />
           </ShimmerBorder>
         </div>
+      </Motion.div>
       </div>
     </div>
   );
