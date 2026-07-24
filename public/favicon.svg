@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7E29" />
+      <stop offset="50%" stop-color="#FF5E4B" />
+      <stop offset="100%" stop-color="#FF3E6C" />
+    </linearGradient>
+    <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF7E29" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#FF3E6C" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Outer Gradient Border -->
+  <rect x="4" y="4" width="120" height="120" rx="36" fill="url(#primaryGrad)" />
+
+  <!-- Inner White Background -->
+  <rect x="8" y="8" width="112" height="112" rx="32" fill="#FFFFFF" />
+
+  <!-- Soft Ambient Inner Radial Glow -->
+  <rect x="8" y="8" width="112" height="112" rx="32" fill="url(#glowGrad)" />
+
+  <!-- Stylized Monogram S -->
+  <text x="64" y="90" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-weight="900" font-size="82" text-anchor="middle" fill="url(#primaryGrad)">S</text>
+</svg>
