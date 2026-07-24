@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
-import ShimmerBorder from "./ShimmerBorder"; // তোমার ShimmerBorder ইমপোর্ট করো
+import ShimmerBorder from "./ShimmerBorder";
 
 const SocialLinks = () => {
   const links = [
@@ -20,7 +20,7 @@ const SocialLinks = () => {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-slate-950 text-xl text-white transition duration-300 hover:-translate-y-0.5 hover:bg-slate-900 hover:text-cyan-200 focus-ring"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-xl text-[#0F172A] transition duration-300 hover:-translate-y-0.5 hover:bg-slate-100 hover:text-[#FF7E29] focus-ring"
             aria-label="social link"
           >
             {icon}

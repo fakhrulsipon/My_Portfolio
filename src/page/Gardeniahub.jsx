@@ -1,8 +1,8 @@
-
+import React from "react";
 import { FaTools, FaLink, FaGithub, FaExclamationTriangle, FaLightbulb } from "react-icons/fa";
 import Navbar from "../component/Navbar";
 
-const CourseManagement = () => {
+const Gardeniahub = () => {
     const project = {
         name: "GardeniaHub",
         techStack: ["React", "Node.js", "Express", "MongoDB","javaScript","Tailwind CSS"],
@@ -24,25 +24,24 @@ const CourseManagement = () => {
     };
 
     return (
-        <div>
-
-        <Navbar></Navbar>
-            <div className="min-h-screen bg-gray-900 text-gray-100 flex justify-center items-start py-12 px-4 sm:px-6 lg:px-8 mt-8 md:mt-12 lg:mt-16">
-                <div className="max-w-6xl w-full gap-10 rounded-2xl p-8">
+        <div className="bg-[#FAFAFA] min-h-screen text-[#0F172A]">
+            <Navbar></Navbar>
+            <div className="min-h-screen bg-[#FAFAFA] text-[#0F172A] flex justify-center items-start py-12 px-4 sm:px-6 lg:px-8 mt-8 md:mt-12 lg:mt-16">
+                <div className="premium-card max-w-6xl w-full gap-10 rounded-3xl bg-white p-6 md:p-10 border border-slate-200/80 shadow-xl shadow-slate-200/50">
 
                     {/* Left side: Details */}
                     <div className="flex-1 flex flex-col justify-center">
-                        <h1 className="lg:text-5xl md:text-4xl text-3xl font-semibold mb-8 text-center md:text-left">{project.name}</h1>
+                        <h1 className="lg:text-5xl md:text-4xl text-3xl font-extrabold mb-8 text-center md:text-left text-gradient-primary">{project.name}</h1>
 
                         <div className="mb-8">
-                            <h2 className="text-2xl md:text-3xl font-semibold mb-4 flex items-center gap-3 text-green-400">
+                            <h2 className="text-2xl md:text-3xl font-bold mb-4 flex items-center gap-3 text-[#FF7E29]">
                                 <FaTools size={28} /> Main Technology Stack
                             </h2>
-                            <ul className="flex flex-wrap gap-4">
+                            <ul className="flex flex-wrap gap-3">
                                 {project.techStack.map((tech, idx) => (
                                     <li
                                         key={idx}
-                                        className="bg-green-700 bg-opacity-70 px-5 py-2 rounded-full font-semibold shadow-md hover:bg-green-600 cursor-default transition"
+                                        className="premium-chip text-sm"
                                     >
                                         {tech}
                                     </li>
@@ -51,10 +50,10 @@ const CourseManagement = () => {
                         </div>
 
                         <div className="mb-8">
-                            <h2 className="text-2xl md:text-3xl font-semibold mb-4 flex items-center gap-3 text-yellow-400">
+                            <h2 className="text-2xl md:text-3xl font-bold mb-4 flex items-center gap-3 text-amber-600">
                                 <FaLightbulb size={28} /> Brief Description
                             </h2>
-                            <p className="text-lg leading-relaxed">{project.description}</p>
+                            <p className="text-lg leading-relaxed text-slate-700 font-medium">{project.description}</p>
                         </div>
 
                         <div className="mb-8 flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
@@ -62,7 +61,7 @@ const CourseManagement = () => {
                                 href={project.liveLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center justify-center gap-3 px-8 py-3 bg-blue-600 rounded-lg text-white font-semibold shadow-lg hover:bg-blue-700 transition"
+                                className="flex items-center justify-center gap-3 px-8 py-3 rounded-full bg-gradient-to-r from-[#FF7E29] to-[#FF3E6C] text-white font-bold shadow-lg shadow-[#FF7E29]/25 hover:scale-105 transition duration-300"
                             >
                                 <FaLink size={20} /> Live Project
                             </a>
@@ -70,17 +69,17 @@ const CourseManagement = () => {
                                 href={project.githubClient}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center justify-center gap-3 px-8 py-3 bg-gray-700 rounded-lg text-white font-semibold shadow-lg hover:bg-gray-600 transition"
+                                className="flex items-center justify-center gap-3 px-8 py-3 rounded-full border border-slate-200 bg-slate-100 text-[#0F172A] font-bold shadow-md hover:bg-slate-200 hover:scale-105 transition duration-300"
                             >
                                 <FaGithub size={20} /> GitHub Client Repo
                             </a>
                         </div>
 
                         <div className="mb-8">
-                            <h2 className="text-2xl md:text-3xl font-semibold mb-4 flex items-center gap-3 text-red-400">
+                            <h2 className="text-2xl md:text-3xl font-bold mb-4 flex items-center gap-3 text-rose-600">
                                 <FaExclamationTriangle size={28} /> Challenges Faced
                             </h2>
-                            <ul className="list-disc list-inside space-y-3 text-lg">
+                            <ul className="list-disc list-inside space-y-3 text-lg text-slate-700 font-medium">
                                 {project.challenges.map((challenge, idx) => (
                                     <li key={idx}>{challenge}</li>
                                 ))}
@@ -88,10 +87,10 @@ const CourseManagement = () => {
                         </div>
 
                         <div>
-                            <h2 className="text-xl md:text-3xl font-semibold mb-4 flex items-center gap-3 text-indigo-400">
+                            <h2 className="text-xl md:text-3xl font-bold mb-4 flex items-center gap-3 text-[#FF7E29]">
                                 <FaLightbulb size={28} /> Potential Improvements & Future Plans
                             </h2>
-                            <ul className="list-disc list-inside space-y-3 text-lg">
+                            <ul className="list-disc list-inside space-y-3 text-lg text-slate-700 font-medium">
                                 {project.improvements.map((improve, idx) => (
                                     <li key={idx}>{improve}</li>
                                 ))}
@@ -101,22 +100,21 @@ const CourseManagement = () => {
 
                     {/* Right side: Image */}
                     <div className="flex-1 flex flex-col justify-center items-center mt-8">
-                        <h3 className="text-xl font-semibold text-green-400 mb-4 text-center px-4">
+                        <h3 className="text-xl font-bold text-[#FF7E29] mb-4 text-center px-4">
                             Visual Snapshot of ChatOrbit's User Interface
                         </h3>
                         <img
                             src={project.image}
                             alt={`${project.name} Screenshot`}
-                            className="rounded-3xl shadow-2xl border-4 border-green-500 object-contain"
-                            style={{ width: "60%" }}
+                            className="rounded-3xl shadow-xl border-2 border-slate-200 object-contain bg-slate-50"
+                            style={{ width: "80%" }}
                             loading="lazy"
                         />
                     </div>
                 </div>
             </div>
-
         </div>
     );
 };
 
-export default CourseManagement;
+export default Gardeniahub;

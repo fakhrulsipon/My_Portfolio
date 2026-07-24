@@ -1,20 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
 @import "tailwindcss";
 @plugin "daisyui";
 
 :root {
-  color-scheme: dark;
-  --font-display: Georgia, "Times New Roman", serif;
-  --font-body: "Geist", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --bg-ink: #070b12;
-  --bg-panel: rgba(15, 23, 42, 0.72);
-  --border-soft: rgba(148, 163, 184, 0.18);
-  --text-main: #f8fafc;
-  --text-muted: #b6c2d2;
-  --accent-cyan: #22d3ee;
-  --accent-emerald: #34d399;
-  --accent-violet: #a78bfa;
+  color-scheme: light;
+  --font-body: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --bg-main: #FAFAFA;
+  --bg-card: #FFFFFF;
+  --border-subtle: #E2E8F0;
+  --text-primary: #0F172A;
+  --text-muted: #64748B;
+  --primary-accent-grad: linear-gradient(135deg, #FF7E29 0%, #FF3E6C 100%);
 }
 
 * {
@@ -25,8 +22,8 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: var(--font-body);
-  background: var(--bg-ink);
-  color: var(--text-main);
+  background: var(--bg-main);
+  color: var(--text-primary);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -39,10 +36,9 @@ html {
 h1,
 h2,
 h3,
-.font-display {
-  font-family: var(--font-display);
-}
-
+h4,
+h5,
+h6,
 button,
 input,
 textarea,
@@ -51,8 +47,8 @@ a {
 }
 
 ::selection {
-  background: rgba(34, 211, 238, 0.28);
-  color: #ffffff;
+  background: rgba(255, 126, 41, 0.2);
+  color: #0F172A;
 }
 
 @layer components {
@@ -64,15 +60,27 @@ a {
     @apply max-w-7xl mx-auto;
   }
 
+  .section-badge {
+    @apply inline-flex items-center gap-2 rounded-full border border-[#FF7E29]/25 bg-[#FF7E29]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#FF7E29] shadow-xs mb-3;
+  }
+
   .premium-card {
-    @apply border border-white/10 bg-white/[0.055] shadow-[0_24px_80px_rgba(0,0,0,0.32)] backdrop-blur-xl;
+    @apply border border-slate-200/80 bg-white shadow-[0_10px_35px_rgba(15,23,42,0.05)] backdrop-blur-xl transition duration-300;
   }
 
   .premium-chip {
-    @apply rounded-full border border-white/10 bg-white/[0.07] px-3 py-1.5 text-sm font-medium text-slate-100 shadow-sm transition duration-300 hover:border-cyan-300/40 hover:bg-cyan-300/10;
+    @apply rounded-full border border-slate-200 bg-slate-100/90 px-3.5 py-1.5 text-xs md:text-sm font-semibold text-slate-700 shadow-xs transition duration-300 hover:border-[#FF7E29]/50 hover:bg-[#FF7E29]/10 hover:text-[#FF7E29];
+  }
+
+  .btn-gradient-pill {
+    @apply relative inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#FF7E29] to-[#FF3E6C] px-7 py-3 font-semibold text-white shadow-lg shadow-[#FF7E29]/25 transition duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-[#FF3E6C]/35 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF7E29]/80 focus-visible:ring-offset-2 focus-visible:ring-offset-white;
+  }
+
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-[#FF7E29] via-[#FF5E4B] to-[#FF3E6C] bg-clip-text text-transparent;
   }
 
   .focus-ring {
-    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/80 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF7E29]/80 focus-visible:ring-offset-2 focus-visible:ring-offset-white;
   }
 }

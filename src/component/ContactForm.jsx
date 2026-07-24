@@ -21,7 +21,7 @@ const ContactForm = () => {
                         icon: 'success',
                         title: 'Message Sent!',
                         text: 'Your message has been sent successfully.',
-                        confirmButtonColor: '#06b6d4',
+                        confirmButtonColor: '#FF7E29',
                     });
                     form.current.reset();
                 },
@@ -38,17 +38,20 @@ const ContactForm = () => {
     };
 
     return (
-        <div className='section-shell py-16 md:py-20 lg:py-24'>
+        <div className='section-shell py-6 md:py-8 lg:py-10'>
             <div className="section-container">
 
-            <h2 className="mb-2 text-center text-4xl font-medium tracking-tight text-white md:text-5xl">
-                Get In Touch
-            </h2>
-            <p className="mx-auto mb-10 mt-4 max-w-2xl text-center leading-7 text-slate-400">
-                Have questions or want to work together? Fill out the form below and I’ll get back to you as soon as possible.
-            </p>
+            <div className="mb-8 text-center">
+                <span className="section-badge">📬 GET IN TOUCH</span>
+                <h2 className="mt-1 text-4xl font-semibold tracking-tight text-[#0F172A] md:text-5xl">
+                    Get In Touch
+                </h2>
+                <p className="mx-auto mt-4 max-w-2xl text-center leading-7 text-slate-600">
+                    Have questions or want to work together? Fill out the form below and I’ll get back to you as soon as possible.
+                </p>
+            </div>
 
-            <div className='premium-card grid items-center gap-8 rounded-[2rem] p-5 md:p-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12'>
+            <div className='premium-card grid items-center gap-8 rounded-[2rem] bg-white p-5 md:p-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12 border border-slate-200/80 shadow-lg shadow-slate-200/50'>
 
                 <div className="w-full">
                     <Lottie animationData={contactLottie} loop={true} style={{ width: '100%', height: '100%' }} />
@@ -63,7 +66,7 @@ const ContactForm = () => {
                             name="name"
                             placeholder="Your Name*"
                             autoComplete="off"
-                            className="w-full rounded-2xl border border-white/10 bg-white/[0.055] px-4 py-3.5 text-white placeholder-slate-400 transition duration-300 focus:border-cyan-300/50 focus:bg-white/[0.08] focus:outline-none focus:ring-2 focus:ring-cyan-300/20"
+                            className="w-full rounded-2xl border border-slate-200 bg-slate-50/90 px-4 py-3.5 text-[#0F172A] placeholder-slate-400 transition duration-300 focus:border-[#FF7E29] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FF7E29]/20 font-medium"
                             required
                         />
 
@@ -73,7 +76,7 @@ const ContactForm = () => {
                             name="email"
                             autoComplete="off"
                             placeholder="Your Email*"
-                            className="w-full rounded-2xl border border-white/10 bg-white/[0.055] px-4 py-3.5 text-white placeholder-slate-400 transition duration-300 focus:border-cyan-300/50 focus:bg-white/[0.08] focus:outline-none focus:ring-2 focus:ring-cyan-300/20"
+                            className="w-full rounded-2xl border border-slate-200 bg-slate-50/90 px-4 py-3.5 text-[#0F172A] placeholder-slate-400 transition duration-300 focus:border-[#FF7E29] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FF7E29]/20 font-medium"
                             required
                         />
 
@@ -82,7 +85,7 @@ const ContactForm = () => {
                             name="message"
                             placeholder="Your message*"
                             rows="5"
-                            className="w-full rounded-2xl border border-white/10 bg-white/[0.055] px-4 py-3.5 text-white placeholder-slate-400 transition duration-300 focus:border-cyan-300/50 focus:bg-white/[0.08] focus:outline-none focus:ring-2 focus:ring-cyan-300/20"
+                            className="w-full rounded-2xl border border-slate-200 bg-slate-50/90 px-4 py-3.5 text-[#0F172A] placeholder-slate-400 transition duration-300 focus:border-[#FF7E29] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FF7E29]/20 font-medium"
                             required
                         ></textarea>
 
@@ -90,7 +93,7 @@ const ContactForm = () => {
                         <button
                             type="submit"
                             value='send'
-                            className="w-full rounded-2xl border border-cyan-300/40 bg-cyan-300/10 px-4 py-3.5 font-semibold text-cyan-100 shadow-lg shadow-cyan-950/30 transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-300/20 hover:text-white focus-ring"
+                            className="w-full rounded-full bg-gradient-to-r from-[#FF7E29] to-[#FF3E6C] px-4 py-3.5 font-bold text-white shadow-lg shadow-[#FF7E29]/25 transition duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-[#FF3E6C]/35 focus-ring cursor-pointer"
                         >
                             SUBMIT
                         </button>

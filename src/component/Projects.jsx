@@ -5,11 +5,14 @@ import Project4 from "./Project4"
 
 const Projects = () => {
   return (
-    <div className="section-shell pt-8 md:pt-10 lg:pt-12">
+    <div className="section-shell py-6 md:py-8 lg:py-10">
       <div className="section-container">
-      <h1 className="mb-12 text-center text-4xl font-medium tracking-tight text-white md:text-5xl">
-        My Projects
-      </h1>
+      <div className="mb-12 md:mb-14 lg:mb-16 text-center">
+        <span className="section-badge">🚀 RECENT WORK</span>
+        <h1 className="mt-1 text-4xl font-semibold tracking-tight text-[#0F172A] md:text-5xl">
+          My Projects
+        </h1>
+      </div>
       <div className="grid grid-cols-1 items-stretch gap-7 xl:grid-cols-2 xl:auto-rows-fr">
         <Project1></Project1>
 
