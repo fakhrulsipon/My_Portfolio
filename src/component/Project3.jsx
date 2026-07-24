@@ -12,7 +12,7 @@ const Project1 = () => {
         <div className="grid h-full">
           <div className="relative min-h-64 overflow-hidden border-b border-white/10 bg-slate-950/70">
             <img
-              src="https://i.postimg.cc/qqWCGsYs/chatorbit-2.png"
+              src="/orbit.png"
               alt={`${name} project`}
               className="h-full min-h-64 w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
             />
@@ -59,7 +59,7 @@ const Project1 = () => {
                 {/* Live Site */}
                 <div>
                   <a
-                    href="https://super-gelato-a1166f.netlify.app/"
+                    href="https://chat-orbit1.netlify.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group/link relative"

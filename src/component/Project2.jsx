@@ -12,7 +12,7 @@ const Project2 = () => {
         <div className="grid h-full">
           <div className="relative min-h-64 overflow-hidden border-b border-white/10 bg-slate-950/70">
             <img
-              src="/download.png"
+              src="/skill-bridge.png"
               alt={`${name} project`}
               className="h-full min-h-64 w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
             />
