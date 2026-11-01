@@ -1,26 +1,12 @@
 import React from "react";
 
 export default function ShimmerBorder({ children, borderWidth = 6 }) {
-  const customCss = `
-    @property --angle {
-      syntax: '<angle>';
-      initial-value: 0deg;
-      inherits: false;
-    }
-
-    @keyframes shimmer-spin {
-      to {
-        --angle: 360deg;
-      }
-    }
-  `;
 
   return (
     <div
       className="relative rounded-full inline-block"
       style={{ padding: borderWidth }}
     >
-      <style>{customCss}</style>
 
       {/* Shimmer border */}
       <div

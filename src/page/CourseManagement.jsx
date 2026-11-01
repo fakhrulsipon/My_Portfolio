@@ -103,7 +103,7 @@ const CourseManagement = () => {
                     {/* Right side: Image */}
                     <div className="flex-1 flex flex-col justify-center items-center mt-8">
                         <h3 className="text-xl font-bold text-[#FF7E29] mb-4 text-center px-4">
-                            Visual Snapshot of ChatOrbit's User Interface
+                            Visual Snapshot of {project.name}'s User Interface
                         </h3>
                         <img
                             src={project.image}
@@ -111,6 +111,7 @@ const CourseManagement = () => {
                             className="rounded-3xl shadow-xl border-2 border-slate-200 object-contain bg-slate-50"
                             style={{ width: "80%" }}
                             loading="lazy"
+                            decoding="async"
                         />
                     </div>
                 </div>

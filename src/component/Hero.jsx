@@ -1,24 +1,10 @@
 import { FaDownload } from "react-icons/fa";
-import image from "../assets/sipon.png";
 import SocialLinks from "../component/SocialLinks";
 import { Typewriter } from "react-simple-typewriter";
 import ShimmerBorder from "./ShimmerBorder";
 import { motion as Motion } from "framer-motion";
 
 const Hero = () => {
-  const customCss = `
-    @property --angle {
-      syntax: '<angle>';
-      initial-value: 0deg;
-      inherits: false;
-    }
-
-    @keyframes shimmer-spin {
-      to {
-        --angle: 360deg;
-      }
-    }
-  `;
 
   return (
     <div className="section-shell">
@@ -40,7 +26,7 @@ const Hero = () => {
           And I'm a{" "}
           <span className="text-xl font-bold bg-gradient-to-r from-[#FF7E29] via-[#FF5E4B] to-[#FF3E6C] bg-clip-text text-transparent sm:text-2xl md:text-3xl">
             <Typewriter
-              words={["Full Stack Developer"]}
+              words={["Senior Full Stack Developer"]}
               loop={false}
               cursor
               cursorStyle="|"
@@ -53,15 +39,18 @@ const Hero = () => {
         </p>
 
         <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-slate-600 md:mx-0 md:text-lg">
-          I am a Passionate Full Stack Developer skilled in building modern,
-          responsive, and user-friendly websites. Experienced in frontend
-          design, web app development, and creative UI/UX solutions......
+          I am a Passionate Senior Full Stack Developer with 6 years of professional
+          experience in{" "}
+          <span className="font-bold text-gradient-primary">
+            delivering 100+ production web applications
+          </span>
+          . Skilled in frontend design, backend architecture, DevOps practices,
+          and creative UI/UX solutions.
         </p>
 
         <div className="mt-8 items-center justify-center gap-4 md:flex md:justify-start">
           {/* Buttons */}
           <div className="flex items-center justify-center">
-            <style>{customCss}</style>
             <a
               href="/Resume.pdf"
               download="Fakhrul_Islam_Sipon_Resume.pdf"
@@ -116,18 +105,8 @@ const Hero = () => {
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#FF7E29]"></span>
             </span>
             <span className="bg-gradient-to-r from-[#FF7E29] to-[#FF3E6C] bg-clip-text text-transparent font-bold">
-              Full Stack Dev
+              Senior Full Stack Dev
             </span>
-          </Motion.div>
-
-          {/* Floating Glass Badge - Bottom Left */}
-          <Motion.div
-            className="absolute -left-6 bottom-8 z-20 hidden sm:flex items-center gap-2 rounded-2xl border border-slate-200/80 bg-white/90 px-4 py-2 text-xs font-semibold text-[#0F172A] shadow-xl backdrop-blur-md"
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <span className="text-base">🚀</span>
-            <span className="font-bold text-[#0F172A]">MERN & Next.js</span>
           </Motion.div>
 
           {/* Outer Glass Ring Frame */}
@@ -135,9 +114,13 @@ const Hero = () => {
             <ShimmerBorder borderWidth={2.5}>
               <div className="relative overflow-hidden rounded-full bg-gradient-to-br from-slate-50 to-white p-3 shadow-inner">
                 <img
-                  src={image}
+                  src="/Sipon.png"
                   alt="Fakhrul Islam Sipon Profile"
-                  className="h-72 w-72 sm:h-80 sm:w-80 md:h-96 md:w-96 rounded-full object-cover transition-transform duration-500 hover:scale-105"
+                  width={384}
+                  height={384}
+                  fetchPriority="high"
+                  decoding="async"
+                  className="h-72 w-72 sm:h-80 sm:w-80 md:h-96 md:w-96 rounded-full object-cover object-top transition-transform duration-500 hover:scale-105"
                 />
               </div>
             </ShimmerBorder>

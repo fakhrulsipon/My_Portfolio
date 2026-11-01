@@ -1,20 +1,9 @@
-import aboutLottie from "../assets/about.json";
-import Lottie from "lottie-react";
+import LazyLottie from "./LazyLottie";
+
+// Module-level so the loader identity is stable across renders
+const loadAboutAnimation = () => import("../assets/about.json");
 
 const About = () => {
-  const customCss = `
-    @property --angle {
-      syntax: '<angle>';
-      initial-value: 0deg;
-      inherits: false;
-    }
-
-    @keyframes shimmer-spin {
-      to {
-        --angle: 360deg;
-      }
-    }
-  `;
 
   return (
     <div className="section-shell py-6 md:py-8 lg:py-10">
@@ -22,11 +11,7 @@ const About = () => {
         {/* ✅ Right: Responsive Lottie Animation */}
         <div className="w-full">
           <div className="premium-card rounded-[2rem] p-4 bg-white border border-slate-200/80 shadow-md">
-            <Lottie
-              animationData={aboutLottie}
-              loop={true}
-              style={{ width: "100%", height: "100%" }}
-            />
+            <LazyLottie load={loadAboutAnimation} aspectRatio="1 / 1" label="Developer at work illustration" />
           </div>
         </div>
         <div className="text-slate-700">
@@ -39,14 +24,12 @@ const About = () => {
 
           {/* Recruiter-Friendly Professional Intro */}
           <p className="mb-7 text-base md:text-lg leading-8 text-slate-700">
-            <span className="font-semibold text-[#0F172A]">Full Stack Developer 💻</span> |{" "}
+            <span className="font-semibold text-[#0F172A]">Senior Full Stack Developer 💻</span> |{" "}
             <span className="font-semibold text-[#0F172A]">Problem Solver 🧩</span> |{" "}
-            <span className="font-semibold text-[#0F172A]">Clean Code Advocate ✨</span> |{" "}
             <span className="font-semibold text-[#0F172A]">Continuous Learner 🚀</span>
           </p>
 
           <div className="relative mx-auto inline-block w-full max-w-xl rounded-3xl p-1">
-            <style>{customCss}</style>
 
             {/* Shimmer border */}
             <div
@@ -66,12 +49,13 @@ const About = () => {
                 Hey! I’m{" "}
                 <span className="font-semibold text-[#0F172A]">Fakhrul Islam Sipon</span>, a
                 passionate{" "}
-                <span className="font-semibold text-[#0F172A]">Full stack developer</span> who
+                <span className="font-semibold text-[#0F172A]">Senior Full Stack Developer</span> who
                 loves turning ideas into digital experiences.
               </p>
               <p>
-                Outside coding, I enjoy football, digital art, and music. I love
-                solving problems and building projects that inspire.
+                When I’m not shipping code, I love exploring cutting-edge tech stacks,
+                contributing to open-source tools, tinkering with AI architectures,
+                and deep-diving into system optimization and cloud engineering.
               </p>
             </div>
           </div>

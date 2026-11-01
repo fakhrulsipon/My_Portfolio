@@ -4,22 +4,73 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#FAFAFA" />
+  <meta name="description" content="Fakhrul Islam Sipon — Senior Full Stack Developer. Portfolio, projects, experience and contact." />
   <title>Fakhrul Islam Sipon</title>
+
+  <!-- Fonts: non-blocking, connection warmed up early -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" />
+
+  <!-- LCP image: start downloading before JS runs -->
+  <link rel="preload" as="image" href="/Sipon.png" fetchpriority="high" />
+
+  <!-- Critical preloader CSS: painted on first frame, before the JS bundle arrives -->
+  <style>
+    html { background: #FAFAFA; }
+    #preloader {
+      position: fixed; inset: 0; z-index: 9999;
+      display: grid; place-items: center;
+      background: #FAFAFA;
+      transition: opacity .5s cubic-bezier(.22,1,.36,1), visibility .5s;
+    }
+    #preloader.is-done { opacity: 0; visibility: hidden; }
+    #preloader .pl-wrap { position: relative; width: 96px; height: 96px; display: grid; place-items: center; }
+    #preloader .pl-glow {
+      position: absolute; inset: -28px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,126,41,.22), rgba(255,62,108,.12) 45%, transparent 70%);
+      animation: pl-pulse 2s ease-in-out infinite;
+    }
+    #preloader .pl-ring {
+      position: absolute; inset: 0; border-radius: 50%;
+      background: conic-gradient(from 0deg, transparent 0 35%, #FF7E29 60%, #FF3E6C 100%);
+      -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px));
+      mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px));
+      animation: pl-spin 1s linear infinite;
+    }
+    #preloader .pl-badge {
+      width: 56px; height: 56px; border-radius: 18px; padding: 1.5px;
+      background: linear-gradient(135deg, #FF7E29, #FF5E4B, #FF3E6C);
+      box-shadow: 0 10px 30px rgba(255,126,41,.25);
+    }
+    #preloader .pl-badge span {
+      display: grid; place-items: center; width: 100%; height: 100%;
+      border-radius: 16.5px; background: #fff;
+      font: 900 28px/1 "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+      letter-spacing: -.05em;
+      color: #FF5E4B;
+    }
+    @keyframes pl-spin { to { transform: rotate(360deg); } }
+    @keyframes pl-pulse { 0%,100% { opacity: .55; transform: scale(1); } 50% { opacity: 1; transform: scale(1.12); } }
+    @media (prefers-reduced-motion: reduce) {
+      #preloader .pl-ring, #preloader .pl-glow { animation: none; }
+    }
+  </style>
 </head>
 
 <body>
+  <div id="preloader" role="status" aria-label="Loading">
+    <div class="pl-wrap">
+      <div class="pl-glow"></div>
+      <div class="pl-ring"></div>
+      <div class="pl-badge"><span>S</span></div>
+    </div>
+  </div>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-  </script>
-  <script type="text/javascript">
-    (function () {
-      emailjs.init({
-        publicKey: "dWdSuk3nDC-gqpGJR",
-      });
-    })();
-  </script>
 </body>
 
 </html>

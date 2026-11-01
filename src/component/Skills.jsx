@@ -6,6 +6,9 @@ import {
   FaNodeJs,
   FaGithub,
   FaFigma,
+  FaAws,
+  FaServer,
+  FaBrain,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -15,6 +18,11 @@ import {
   SiExpress,
   SiVercel,
   SiNetlify,
+  SiDocker,
+  SiNginx,
+  SiRedis,
+  SiGithubactions,
+  SiPostgresql,
 } from "react-icons/si";
 import Marquee from "react-fast-marquee";
 
@@ -45,6 +53,14 @@ export default function Skills() {
                   <FaNodeJs className="text-green-500" />
                   <SiExpress className="text-slate-700" />
                   <SiMongodb className="text-green-500" />
+                  <SiPostgresql className="text-sky-600" />
+                  <SiRedis className="text-red-500" />
+                  <SiDocker className="text-sky-500" />
+                  <FaAws className="text-amber-500" />
+                  <SiNginx className="text-emerald-500" />
+                  <SiGithubactions className="text-indigo-400" />
+                  <FaServer className="text-slate-600" />
+                  <FaBrain className="text-rose-400" />
                   <FaGithub className="text-slate-800" />
                   <SiVercel className="text-slate-800" />
                   <SiNetlify className="text-sky-500" />
@@ -54,6 +70,13 @@ export default function Skills() {
 
               <Marquee gradient={false} speed={50}>
                 <div className="my-2 flex gap-8 text-5xl md:text-6xl items-center">
+                  <SiDocker className="text-sky-500" />
+                  <FaAws className="text-amber-500" />
+                  <SiNginx className="text-emerald-500" />
+                  <SiRedis className="text-red-500" />
+                  <SiGithubactions className="text-indigo-400" />
+                  <FaServer className="text-slate-600" />
+                  <FaBrain className="text-rose-400" />
                   <FaHtml5 className="text-orange-500" />
                   <FaCss3Alt className="text-blue-500" />
                   <SiTailwindcss className="text-sky-400" />
@@ -64,6 +87,7 @@ export default function Skills() {
                   <FaNodeJs className="text-green-500" />
                   <SiExpress className="text-slate-700" />
                   <SiMongodb className="text-green-500" />
+                  <SiPostgresql className="text-sky-600" />
                   <FaGithub className="text-slate-800" />
                   <SiVercel className="text-slate-800" />
                   <SiNetlify className="text-sky-500" />
@@ -73,18 +97,24 @@ export default function Skills() {
             </div>
 
             {/* Skills Text */}
-            <div className="grid gap-4 p-1 md:grid-cols-3 md:p-4">
+            <div className="grid gap-4 p-1 sm:grid-cols-2 lg:grid-cols-4 md:p-4">
               <p className="rounded-2xl border border-slate-200 bg-slate-50/80 p-5 leading-7 text-slate-700 transition duration-300 hover:-translate-y-1 hover:border-[#FF7E29]/40 hover:bg-[#FF7E29]/5 shadow-xs">
                 <span className="font-semibold bg-gradient-to-r from-[#FF7E29] via-[#FF5E4B] to-[#FF3E6C] bg-clip-text text-transparent">
                   Front-End:
                 </span>{" "}
-              TypeScript, Next.js, JavaScript, React.js, HTML, CSS, Tailwind CSS, shadcn/ui 
+                TypeScript, Next.js, JavaScript, React.js, HTML, CSS, Tailwind CSS, shadcn/ui
               </p>
               <p className="rounded-2xl border border-slate-200 bg-slate-50/80 p-5 leading-7 text-slate-700 transition duration-300 hover:-translate-y-1 hover:border-[#FF7E29]/40 hover:bg-[#FF7E29]/5 shadow-xs">
                 <span className="font-semibold bg-gradient-to-r from-[#FF7E29] via-[#FF5E4B] to-[#FF3E6C] bg-clip-text text-transparent">
-                  Back-End:
+                  Back-End & AI:
                 </span>{" "}
-                Nestjs, Node.js, Express.js, Prisma, PostgreSQL, MongoDB
+                NestJS, Node.js, Express.js, Prisma, PostgreSQL, MongoDB, Redis, RAG
+              </p>
+              <p className="rounded-2xl border border-slate-200 bg-slate-50/80 p-5 leading-7 text-slate-700 transition duration-300 hover:-translate-y-1 hover:border-[#FF7E29]/40 hover:bg-[#FF7E29]/5 shadow-xs">
+                <span className="font-semibold bg-gradient-to-r from-[#FF7E29] via-[#FF5E4B] to-[#FF3E6C] bg-clip-text text-transparent">
+                  DevOps & Cloud:
+                </span>{" "}
+                Docker, CI/CD, AWS, VPS, Nginx
               </p>
               <p className="rounded-2xl border border-slate-200 bg-slate-50/80 p-5 leading-7 text-slate-700 transition duration-300 hover:-translate-y-1 hover:border-[#FF7E29]/40 hover:bg-[#FF7E29]/5 shadow-xs">
                 <span className="font-semibold bg-gradient-to-r from-[#FF7E29] via-[#FF5E4B] to-[#FF3E6C] bg-clip-text text-transparent">

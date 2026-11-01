@@ -2,19 +2,6 @@ import { FaDownload } from "react-icons/fa";
 import Logo from "./Logo";
 
 const Navbar = () => {
-  const customCss = `
-    @property --angle {
-      syntax: '<angle>';
-      initial-value: 0deg;
-      inherits: false;
-    }
-
-    @keyframes shimmer-spin {
-      to {
-        --angle: 360deg;
-      }
-    }
-  `;
 
   const Links = (
     <>
@@ -26,6 +13,9 @@ const Navbar = () => {
       </li>
       <li>
         <a className="rounded-full px-4 py-2 text-sm font-semibold transition duration-300 hover:bg-slate-100 hover:text-[#FF7E29]" href="/#skills">Skills</a>
+      </li>
+      <li>
+        <a className="rounded-full px-4 py-2 text-sm font-semibold transition duration-300 hover:bg-slate-100 hover:text-[#FF7E29]" href="/#experience">Experience</a>
       </li>
       <li>
         <a className="rounded-full px-4 py-2 text-sm font-semibold transition duration-300 hover:bg-slate-100 hover:text-[#FF7E29]" href="/#projects">Projects</a>
@@ -59,6 +49,10 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
+            onClick={(e) => {
+              // DaisyUI dropdowns stay open while focused: blur on link tap so the menu closes
+              if (e.target.closest("a")) document.activeElement?.blur();
+            }}
             className="menu menu-sm dropdown-content mt-4 w-56 gap-2 rounded-2xl border border-slate-200 bg-white p-4 text-[#0F172A] shadow-xl backdrop-blur-xl"
           >
             {Links}
@@ -80,7 +74,6 @@ const Navbar = () => {
       <div className="flex flex-col sm:flex-row items-center gap-6 navbar-end">
         {/* Buttons */}
         <div className="flex items-center justify-center">
-          <style>{customCss}</style>
           <a
             href="/Resume.pdf"
             download="Fakhrul_Islam_Sipon_Resume.pdf"

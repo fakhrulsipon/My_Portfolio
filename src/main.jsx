@@ -1,15 +1,13 @@
-import { StrictMode } from 'react'
+import { StrictMode, lazy, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router";
-import ChatOrbit from './page/ChatOrbit';
-import Gardeniahub from './page/Gardeniahub';
-import CourseManagement from './page/CourseManagement';
+import { createBrowserRouter } from "react-router";
 import AppWrapper from './appWraper/AppWrapper';
+import Root from './appWraper/Root';
+
+// Secondary page: split into its own chunk so it never weighs on the home page.
+const CourseManagement = lazy(() => import('./page/CourseManagement'));
 
 const router = createBrowserRouter([
   {
@@ -17,21 +15,17 @@ const router = createBrowserRouter([
     element: <AppWrapper></AppWrapper>,
   },
   {
-    path: '/chatorbit',
-    element: <ChatOrbit></ChatOrbit>
-  },
-  {
-    path: '/gardeniahub',
-    element: <Gardeniahub></Gardeniahub>
-  },
-  {
     path: '/course-management',
-    element: <CourseManagement></CourseManagement>
+    element: (
+      <Suspense fallback={<div className="min-h-screen bg-[#FAFAFA]" />}>
+        <CourseManagement></CourseManagement>
+      </Suspense>
+    ),
   }
 ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <Root router={router} />
   </StrictMode>
 )
