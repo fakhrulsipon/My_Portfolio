@@ -25,8 +25,8 @@ const About = () => {
           {/* Recruiter-Friendly Professional Intro */}
           <p className="mb-7 text-base md:text-lg leading-8 text-slate-700">
             <span className="font-semibold text-[#0F172A]">Senior Full Stack Developer 💻</span> |{" "}
-            <span className="font-semibold text-[#0F172A]">Problem Solver 🧩</span> |{" "}
-            <span className="font-semibold text-[#0F172A]">Continuous Learner 🚀</span>
+            <span className="font-semibold text-[#0F172A]">AI Automation Expert 🤖</span> |{" "}
+            <span className="font-semibold text-[#0F172A]">Plumbing Digital Partner 🔧</span>
           </p>
 
           <div className="relative mx-auto inline-block w-full max-w-xl rounded-3xl p-1">
@@ -47,15 +47,17 @@ const About = () => {
             <div className="premium-card relative space-y-4 rounded-3xl p-7 text-slate-600 bg-white border border-slate-200/80 shadow-md">
               <p>
                 Hey! I’m{" "}
-                <span className="font-semibold text-[#0F172A]">Fakhrul Islam Sipon</span>, a
-                passionate{" "}
-                <span className="font-semibold text-[#0F172A]">Senior Full Stack Developer</span> who
-                loves turning ideas into digital experiences.
+                <span className="font-semibold text-[#0F172A]">Fakhrul Islam Sipon</span>, a{" "}
+                <span className="font-semibold text-[#0F172A]">Senior Full Stack Developer</span> and{" "}
+                <span className="font-semibold text-[#0F172A]">AI Automation Expert</span> who turns
+                ideas into fast, scalable digital products — and repetitive work into smart,
+                automated systems.
               </p>
               <p>
-                When I’m not shipping code, I love exploring cutting-edge tech stacks,
-                contributing to open-source tools, tinkering with AI architectures,
-                and deep-diving into system optimization and cloud engineering.
+                I also specialize in the{" "}
+                <span className="font-semibold text-[#0F172A]">plumbing industry</span>. From
+                high-converting websites and local SEO to online booking, AI call answering and
+                automated lead follow-up, I help plumbing companies get more calls and book more jobs.
               </p>
             </div>
           </div>

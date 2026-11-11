@@ -26,6 +26,29 @@ import {
 } from "react-icons/si";
 import Marquee from "react-fast-marquee";
 
+const SKILL_GROUPS = [
+  {
+    title: "Front-End",
+    items: "TypeScript, Next.js, JavaScript, React.js, HTML, CSS, Tailwind CSS, shadcn/ui",
+  },
+  {
+    title: "Back-End",
+    items: "NestJS, Node.js, Express.js, Prisma, PostgreSQL, MongoDB, Redis",
+  },
+  {
+    title: "AI & Automation",
+    items: "LLM integrations, RAG, AI chatbots & voice agents, workflow automation, CRM & lead automation",
+  },
+  {
+    title: "DevOps & Cloud",
+    items: "Docker, CI/CD, AWS, VPS, Nginx",
+  },
+  {
+    title: "Tools",
+    items: "Git, GitHub, VS Code, Postman, Netlify, Vercel, Figma",
+  },
+];
+
 export default function Skills() {
   return (
     <section className="section-shell py-6 md:py-8 lg:py-10">
@@ -97,31 +120,21 @@ export default function Skills() {
             </div>
 
             {/* Skills Text */}
-            <div className="grid gap-4 p-1 sm:grid-cols-2 lg:grid-cols-4 md:p-4">
-              <p className="rounded-2xl border border-slate-200 bg-slate-50/80 p-5 leading-7 text-slate-700 transition duration-300 hover:-translate-y-1 hover:border-[#FF7E29]/40 hover:bg-[#FF7E29]/5 shadow-xs">
-                <span className="font-semibold bg-gradient-to-r from-[#FF7E29] via-[#FF5E4B] to-[#FF3E6C] bg-clip-text text-transparent">
-                  Front-End:
-                </span>{" "}
-                TypeScript, Next.js, JavaScript, React.js, HTML, CSS, Tailwind CSS, shadcn/ui
-              </p>
-              <p className="rounded-2xl border border-slate-200 bg-slate-50/80 p-5 leading-7 text-slate-700 transition duration-300 hover:-translate-y-1 hover:border-[#FF7E29]/40 hover:bg-[#FF7E29]/5 shadow-xs">
-                <span className="font-semibold bg-gradient-to-r from-[#FF7E29] via-[#FF5E4B] to-[#FF3E6C] bg-clip-text text-transparent">
-                  Back-End & AI:
-                </span>{" "}
-                NestJS, Node.js, Express.js, Prisma, PostgreSQL, MongoDB, Redis, RAG
-              </p>
-              <p className="rounded-2xl border border-slate-200 bg-slate-50/80 p-5 leading-7 text-slate-700 transition duration-300 hover:-translate-y-1 hover:border-[#FF7E29]/40 hover:bg-[#FF7E29]/5 shadow-xs">
-                <span className="font-semibold bg-gradient-to-r from-[#FF7E29] via-[#FF5E4B] to-[#FF3E6C] bg-clip-text text-transparent">
-                  DevOps & Cloud:
-                </span>{" "}
-                Docker, CI/CD, AWS, VPS, Nginx
-              </p>
-              <p className="rounded-2xl border border-slate-200 bg-slate-50/80 p-5 leading-7 text-slate-700 transition duration-300 hover:-translate-y-1 hover:border-[#FF7E29]/40 hover:bg-[#FF7E29]/5 shadow-xs">
-                <span className="font-semibold bg-gradient-to-r from-[#FF7E29] via-[#FF5E4B] to-[#FF3E6C] bg-clip-text text-transparent">
-                  Tools:
-                </span>{" "}
-                Git, GitHub, VS Code, Postman, Netlify, Vercel, Figma
-              </p>
+            {/* 5 groups: 3 per row on large screens, then 2 wider cards */}
+            <div className="grid gap-4 p-1 sm:grid-cols-2 lg:grid-cols-6 md:p-4">
+              {SKILL_GROUPS.map((group, i) => (
+                <p
+                  key={group.title}
+                  className={`rounded-2xl border border-slate-200 bg-slate-50/80 p-5 leading-7 text-slate-700 transition duration-300 hover:-translate-y-1 hover:border-[#FF7E29]/40 hover:bg-[#FF7E29]/5 shadow-xs ${
+                    i < 3 ? "lg:col-span-2" : i === 3 ? "lg:col-span-3" : "sm:col-span-2 lg:col-span-3"
+                  }`}
+                >
+                  <span className="font-semibold bg-gradient-to-r from-[#FF7E29] via-[#FF5E4B] to-[#FF3E6C] bg-clip-text text-transparent">
+                    {group.title}:
+                  </span>{" "}
+                  {group.items}
+                </p>
+              ))}
             </div>
           </div>
         </div>

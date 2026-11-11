@@ -3,6 +3,7 @@ import About from "../component/About";
 import Skills from "../component/Skills";
 import Experience from "../component/Experience";
 import Hero from "../component/Hero";
+import Services from "../component/Services";
 import Projects from "../component/Projects";
 import ContactForm from "../component/ContactForm";
 import Footer from "../component/Footer";
@@ -51,6 +52,10 @@ const MainLayout = () => {
         <section className="relative z-10 pt-20">
           <Hero></Hero>
         </section>
+      </section>
+
+      <section id="services" className="relative z-10">
+        <Services></Services>
       </section>
 
       <section id="about" className="relative z-10">

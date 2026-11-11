@@ -1,8 +1,14 @@
-import { FaDownload } from "react-icons/fa";
+import { FaDownload, FaLaptopCode, FaRobot, FaWrench } from "react-icons/fa";
 import SocialLinks from "../component/SocialLinks";
 import { Typewriter } from "react-simple-typewriter";
 import ShimmerBorder from "./ShimmerBorder";
 import { motion as Motion } from "framer-motion";
+
+const EXPERTISE = [
+  { icon: FaLaptopCode, label: "Full Stack Development" },
+  { icon: FaRobot, label: "AI Automation" },
+  { icon: FaWrench, label: "Plumbing Digital Services" },
+];
 
 const Hero = () => {
 
@@ -23,11 +29,15 @@ const Hero = () => {
           Fakhrul Islam Sipon
         </h1>
         <p className="mt-3 text-lg font-medium text-[#1E293B] sm:text-xl md:text-2xl">
-          And I'm a{" "}
+          And I'm{" "}
           <span className="text-xl font-bold bg-gradient-to-r from-[#FF7E29] via-[#FF5E4B] to-[#FF3E6C] bg-clip-text text-transparent sm:text-2xl md:text-3xl">
             <Typewriter
-              words={["Senior Full Stack Developer"]}
-              loop={false}
+              words={[
+                "a Senior Full Stack Developer",
+                "an AI Automation Expert",
+                "a Digital Expert for Plumbers",
+              ]}
+              loop
               cursor
               cursorStyle="|"
               typeSpeed={70}
@@ -39,14 +49,32 @@ const Hero = () => {
         </p>
 
         <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-slate-600 md:mx-0 md:text-lg">
-          I am a Passionate Senior Full Stack Developer with 6 years of professional
-          experience in{" "}
+          I'm a Senior Full Stack Developer and AI Automation Expert with 6 years of
+          professional experience{" "}
           <span className="font-bold text-gradient-primary">
             delivering 100+ production web applications
           </span>
-          . Skilled in frontend design, backend architecture, DevOps practices,
-          and creative UI/UX solutions.
+          . I build scalable SaaS products, automate business workflows with AI, and help
+          plumbing companies win more calls, leads and bookings online.
         </p>
+
+        <ul
+          className="mt-5 flex flex-wrap justify-center gap-2 md:justify-start"
+          aria-label="Core expertise"
+        >
+          {EXPERTISE.map((item) => {
+            const Icon = item.icon;
+            return (
+              <li
+                key={item.label}
+                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-[#0F172A] shadow-sm sm:text-sm"
+              >
+                <Icon className="text-[#FF5E4B]" aria-hidden="true" />
+                {item.label}
+              </li>
+            );
+          })}
+        </ul>
 
         <div className="mt-8 items-center justify-center gap-4 md:flex md:justify-start">
           {/* Buttons */}
@@ -105,8 +133,20 @@ const Hero = () => {
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#FF7E29]"></span>
             </span>
             <span className="bg-gradient-to-r from-[#FF7E29] to-[#FF3E6C] bg-clip-text text-transparent font-bold">
-              Senior Full Stack Dev
+              Full Stack & AI Automation
             </span>
+          </Motion.div>
+
+          {/* Floating Glass Badge - Bottom Left */}
+          <Motion.div
+            className="absolute -left-6 bottom-12 z-20 hidden sm:flex items-center gap-2.5 rounded-2xl border border-slate-200/80 bg-white/90 px-4 py-2.5 text-xs font-semibold text-[#0F172A] shadow-xl backdrop-blur-md"
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
+          >
+            <span className="grid h-7 w-7 place-items-center rounded-xl bg-gradient-to-br from-[#FF7E29] to-[#FF3E6C] text-white">
+              <FaWrench className="text-[11px]" aria-hidden="true" />
+            </span>
+            Plumbing Digital Expert
           </Motion.div>
 
           {/* Outer Glass Ring Frame */}
