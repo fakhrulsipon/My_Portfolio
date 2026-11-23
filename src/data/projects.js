@@ -5,7 +5,7 @@
 export const PROJECT_CATEGORIES = [
   {
     id: "saas",
-    label: "SaaS Products",
+    label: "SaaS & E-commerce",
     blurb: "Full-scale platforms I designed, built and shipped end to end.",
     projects: [
       {
@@ -13,7 +13,7 @@ export const PROJECT_CATEGORIES = [
         subtitle: "E-commerce Management Platform",
         tag: "E-commerce SaaS",
         description:
-          "Sitebari is an e-commerce management platform that helps businesses create and manage online stores, organize products and inventory, process orders, integrate payment gateways and courier services, and monitor sales through an analytics dashboard. It streamlines business operations with storefront customization, marketing tools, and efficient order management workflows.",
+          "All-in-one e-commerce platform to launch online stores, manage products, inventory and orders, connect payments and couriers, and track sales from one dashboard.",
         tech: [
           "Next.js",
           "TypeScript",
@@ -39,7 +39,7 @@ export const PROJECT_CATEGORIES = [
         subtitle: "Competitive Programming Platform",
         tag: "EdTech Platform",
         description:
-          "CodeClash is a competitive programming platform where users can solve coding problems, participate in real-time contests, track rankings, and improve their skills through an interactive coding environment.",
+          "Competitive programming platform with real-time contests, live rankings and an in-browser code editor for solving problems.",
         tech: [
           "React.js",
           "TypeScript",
@@ -59,7 +59,7 @@ export const PROJECT_CATEGORIES = [
         subtitle: "Ride Sharing Platform",
         tag: "Mobility Platform",
         description:
-          "RideX is a ride-sharing platform designed to simplify urban transportation by connecting passengers with convenient ride options. It features an interactive user interface, smooth animations, and engaging visual elements to enhance the user experience. Built with a focus on responsive design and intuitive navigation, the platform provides an engaging experience for exploring ride options and booking transportation.",
+          "Ride-sharing platform that connects passengers with nearby rides through a smooth, animated, mobile-friendly booking experience.",
         tech: ["Next.js", "MongoDB", "JavaScript", "Express.js", "Node.js", "GSAP", "Tailwind CSS", "REST API"],
         live: "https://ridex-ride-sharing.vercel.app/",
         image: "/ridex.png",
@@ -69,7 +69,7 @@ export const PROJECT_CATEGORIES = [
         subtitle: "Business Email & Collaboration Platform",
         tag: "Business Email SaaS",
         description:
-          "Mailbari is a business email platform that enables organizations to manage professional email accounts using custom domains. It provides email management, centralized administration, and security controls to support reliable business communication. The platform is designed to simplify email operations and improve productivity through efficient account and resource management.",
+          "Business email platform for custom-domain mailboxes, with centralized admin, security controls and easy account management.",
         tech: [
           "Next.js",
           "TypeScript",
@@ -89,6 +89,26 @@ export const PROJECT_CATEGORIES = [
         ],
         live: "https://mailbari.com/",
         image: "/mailbari.png",
+      },
+      {
+        name: "Gadget & Gear",
+        subtitle: "Apple Authorized Reseller E-commerce Store",
+        tag: "E-commerce · Bangladesh",
+        description:
+          "Online store for an Apple Authorized Reseller in Bangladesh, with fast product search, rich category browsing, EMI options and secure checkout.",
+        tech: ["Next.js", "React", "Headless WordPress", "REST API"],
+        live: "https://gadgetandgear.com/",
+        image: "/gadgetandgear.png",
+      },
+      {
+        name: "Beauty Booth",
+        subtitle: "Beauty & Cosmetics E-commerce Platform",
+        tag: "E-commerce · Bangladesh",
+        description:
+          "Beauty and cosmetics store with flash sales, brand and category browsing, smart product search and a smooth mobile-first checkout.",
+        tech: ["Next.js", "React", "REST API"],
+        live: "https://beautybooth.com.bd/",
+        image: "/beautybooth.png",
       },
     ],
   },

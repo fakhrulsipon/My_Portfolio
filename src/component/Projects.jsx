@@ -54,7 +54,7 @@ const Projects = () => {
             Featured <span className="text-gradient-primary">Projects</span>
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-slate-600 md:text-base">
-            Full-scale SaaS platforms I designed, built and shipped end to end — real products, live in
+            SaaS platforms and e-commerce stores I designed, built and shipped — real products, live in
             production.
           </p>
         </div>
