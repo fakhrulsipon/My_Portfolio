@@ -1,5 +1,4 @@
 import Navbar from "../component/Navbar";
-import About from "../component/About";
 import Skills from "../component/Skills";
 import Experience from "../component/Experience";
 import Hero from "../component/Hero";
@@ -56,10 +55,6 @@ const MainLayout = () => {
 
       <section id="services" className="relative z-10">
         <Services></Services>
-      </section>
-
-      <section id="about" className="relative z-10">
-        <About></About>
       </section>
 
       <section id="skills" className="relative z-10">

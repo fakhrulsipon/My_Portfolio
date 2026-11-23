@@ -9,9 +9,6 @@ const Navbar = () => {
         <a className="rounded-full px-4 py-2 text-sm font-semibold transition duration-300 hover:bg-slate-100 hover:text-[#FF7E29]" href="/#home">Home</a>
       </li>
       <li>
-        <a className="rounded-full px-4 py-2 text-sm font-semibold transition duration-300 hover:bg-slate-100 hover:text-[#FF7E29]" href="/#about">About</a>
-      </li>
-      <li>
         <a className="rounded-full px-4 py-2 text-sm font-semibold transition duration-300 hover:bg-slate-100 hover:text-[#FF7E29]" href="/#skills">Skills</a>
       </li>
       <li>

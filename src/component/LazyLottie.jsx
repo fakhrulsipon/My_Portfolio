@@ -8,7 +8,7 @@ const Lottie = lazy(() => import("lottie-react"));
  * Both the player and the animation JSON are code-split, and the box reserves
  * its final size via `aspectRatio`, so nothing shifts when it pops in.
  *
- * @param {() => Promise<{default: object}>} load  e.g. () => import("../assets/about.json")
+ * @param {() => Promise<{default: object}>} load  e.g. () => import("../assets/contact-form.json")
  * @param {string} aspectRatio  CSS aspect-ratio of the animation (w / h)
  */
 const LazyLottie = ({ load, aspectRatio = "1 / 1", className = "", label }) => {
