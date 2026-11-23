@@ -118,12 +118,11 @@ const Services = () => {
         >
           <span className="section-badge">🧠 WHAT I DO</span>
           <h2 className="mt-1 text-3xl font-semibold leading-tight tracking-tight text-[#0F172A] md:text-5xl">
-            Full Stack. AI Automation.{" "}
-            <span className="text-gradient-primary">Built to Scale.</span>
+            Build. Automate.{" "}
+            <span className="text-gradient-primary">Scale.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-600 md:text-base">
-            I build the software, automate the busywork with AI, and run it all on cloud infrastructure
-            that stays fast and reliable as you grow.
+            Scalable software, powered by AI automation.
           </p>
         </Motion.div>
 
