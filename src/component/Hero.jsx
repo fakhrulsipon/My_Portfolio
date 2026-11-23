@@ -49,13 +49,9 @@ const Hero = () => {
         </p>
 
         <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-slate-600 md:mx-0 md:text-lg">
-          I'm a Senior Full Stack Developer and AI Automation Expert with 6 years of
-          professional experience{" "}
-          <span className="font-bold text-gradient-primary">
-            delivering 100+ production web applications
-          </span>
-          . I build scalable SaaS products, automate business workflows with AI, and ship them
-          on reliable, production-ready cloud infrastructure.
+          6 years of experience and{" "}
+          <span className="font-bold text-gradient-primary">100+ production web apps</span>{" "}
+          delivered. I build scalable SaaS products and AI-powered automations.
         </p>
 
         <ul
