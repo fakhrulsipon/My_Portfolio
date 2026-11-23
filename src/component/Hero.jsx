@@ -1,4 +1,4 @@
-import { FaDownload, FaLaptopCode, FaRobot, FaWrench } from "react-icons/fa";
+import { FaCloud, FaDownload, FaLaptopCode, FaRobot } from "react-icons/fa";
 import SocialLinks from "../component/SocialLinks";
 import { Typewriter } from "react-simple-typewriter";
 import ShimmerBorder from "./ShimmerBorder";
@@ -7,7 +7,7 @@ import { motion as Motion } from "framer-motion";
 const EXPERTISE = [
   { icon: FaLaptopCode, label: "Full Stack Development" },
   { icon: FaRobot, label: "AI Automation" },
-  { icon: FaWrench, label: "Plumbing Digital Services" },
+  { icon: FaCloud, label: "DevOps & Cloud" },
 ];
 
 const Hero = () => {
@@ -35,7 +35,7 @@ const Hero = () => {
               words={[
                 "a Senior Full Stack Developer",
                 "an AI Automation Expert",
-                "a Digital Expert for Plumbers",
+                "a DevOps & Cloud Engineer",
               ]}
               loop
               cursor
@@ -54,8 +54,8 @@ const Hero = () => {
           <span className="font-bold text-gradient-primary">
             delivering 100+ production web applications
           </span>
-          . I build scalable SaaS products, automate business workflows with AI, and help
-          plumbing companies win more calls, leads and bookings online.
+          . I build scalable SaaS products, automate business workflows with AI, and ship them
+          on reliable, production-ready cloud infrastructure.
         </p>
 
         <ul
@@ -133,7 +133,7 @@ const Hero = () => {
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#FF7E29]"></span>
             </span>
             <span className="bg-gradient-to-r from-[#FF7E29] to-[#FF3E6C] bg-clip-text text-transparent font-bold">
-              Full Stack & AI Automation
+              Senior Full Stack Developer
             </span>
           </Motion.div>
 
@@ -144,9 +144,9 @@ const Hero = () => {
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
           >
             <span className="grid h-7 w-7 place-items-center rounded-xl bg-gradient-to-br from-[#FF7E29] to-[#FF3E6C] text-white">
-              <FaWrench className="text-[11px]" aria-hidden="true" />
+              <FaRobot className="text-[11px]" aria-hidden="true" />
             </span>
-            Plumbing Digital Expert
+            AI Automation Expert
           </Motion.div>
 
           {/* Outer Glass Ring Frame */}

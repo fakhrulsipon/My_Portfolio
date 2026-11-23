@@ -97,7 +97,7 @@ const ContactForm = () => {
                         Let's <span className="text-gradient-primary">Work Together</span>
                     </h2>
                     <p className="mx-auto mt-4 max-w-2xl leading-7 text-slate-600">
-                        Have a SaaS idea, a workflow to automate with AI, or a plumbing business ready to grow online? Fill out the form below and I’ll get back to you as soon as possible.
+                        Have a SaaS idea, a product to build, or a workflow to automate with AI? Fill out the form below and I’ll get back to you as soon as possible.
                     </p>
                 </div>
 

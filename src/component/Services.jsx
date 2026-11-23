@@ -1,5 +1,5 @@
 import { motion as Motion } from "framer-motion";
-import { FaArrowRight, FaCheck, FaLaptopCode, FaRobot, FaStar, FaWrench } from "react-icons/fa";
+import { FaArrowRight, FaCheck, FaCloud, FaLaptopCode, FaRobot, FaRocket, FaStar } from "react-icons/fa";
 
 const PILLARS = [
   {
@@ -27,34 +27,34 @@ const PILLARS = [
       "LLM & RAG integrations for your product",
       "Automated lead follow-up & reporting",
     ],
+    featured: true,
   },
   {
-    icon: FaWrench,
+    icon: FaCloud,
     number: "03",
-    title: "Plumbing Digital Services",
+    title: "DevOps & Cloud",
     description:
-      "Everything a plumbing company needs online to turn local searches into calls, booked jobs and five-star reviews.",
+      "Reliable infrastructure that ships your product quickly and keeps it fast, secure and online.",
     points: [
-      "Websites that turn visitors into calls",
-      "Local SEO & service-area pages that rank",
-      "Online booking, quotes & customer portals",
-      "AI call answering & missed-call text-back",
+      "Dockerized apps & CI/CD pipelines",
+      "AWS, VPS & Nginx deployments",
+      "Redis caching & performance tuning",
+      "Monitoring, security & uptime",
     ],
-    featured: true,
   },
 ];
 
-const PLUMBING_SERVICES = [
-  "High-converting websites",
-  "Local SEO",
-  "Google Business Profile",
-  "Lead generation",
-  "Call tracking",
-  "Online booking & quotes",
-  "AI call answering",
-  "Missed-call text-back",
-  "Review automation",
-  "CRM & job-software integrations",
+const CAPABILITIES = [
+  "SaaS platforms",
+  "Web applications",
+  "AI chatbots & voice agents",
+  "Workflow automation",
+  "LLM & RAG integrations",
+  "REST APIs",
+  "Docker & CI/CD",
+  "AWS deployments",
+  "Performance optimization",
+  "UI/UX implementation",
 ];
 
 const fadeUp = {
@@ -132,11 +132,11 @@ const Services = () => {
           <span className="section-badge">🧠 WHAT I DO</span>
           <h2 className="mt-1 text-3xl font-semibold leading-tight tracking-tight text-[#0F172A] md:text-5xl">
             Full Stack. AI Automation.{" "}
-            <span className="text-gradient-primary">Plumbing Growth.</span>
+            <span className="text-gradient-primary">Built to Scale.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-600 md:text-base">
-            I build the software, automate the busywork with AI, and give plumbing companies a complete
-            digital engine that keeps the phone ringing.
+            I build the software, automate the busywork with AI, and run it all on cloud infrastructure
+            that stays fast and reliable as you grow.
           </p>
         </Motion.div>
 
@@ -145,7 +145,7 @@ const Services = () => {
           {PILLARS.map((pillar, i) => (
             <Motion.div
               key={pillar.title}
-              className={pillar.featured ? "md:col-span-2 lg:col-span-1" : ""}
+              className={i === 2 ? "md:col-span-2 lg:col-span-1" : ""}
               variants={fadeUp}
               initial="hidden"
               whileInView="show"
@@ -157,7 +157,7 @@ const Services = () => {
           ))}
         </div>
 
-        {/* Plumbing partner banner */}
+        {/* Work-together banner */}
         <Motion.div
           className="relative mt-6 overflow-hidden rounded-[2rem] bg-[#0F172A] p-6 text-white shadow-[0_30px_60px_-30px_rgba(15,23,42,0.6)] sm:p-8 md:mt-8 lg:p-12"
           variants={fadeUp}
@@ -177,18 +177,18 @@ const Services = () => {
           <div className="relative grid items-center gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-14">
             <div>
               <span className="inline-flex items-center gap-2 rounded-full border border-[#FF7E29]/40 bg-[#FF7E29]/15 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#FFB27F]">
-                <FaWrench aria-hidden="true" /> For plumbing companies
+                <FaRocket aria-hidden="true" /> Let&apos;s work together
               </span>
               <h3 className="mt-4 text-2xl font-bold leading-tight tracking-tight sm:text-3xl lg:text-4xl">
-                Your plumbing company's complete{" "}
+                From idea to production,{" "}
                 <span className="bg-gradient-to-r from-[#FF9A5A] via-[#FF6B5B] to-[#FF5A82] bg-clip-text text-transparent">
-                  digital partner
+                  built to scale
                 </span>
               </h3>
               <p className="mt-4 max-w-xl text-sm leading-7 text-slate-300 md:text-base">
-                I've built websites for plumbing companies across the USA, Canada and the UK. From your
-                website and local SEO to AI that answers calls and follows up on every lead, I handle the
-                digital side so you can focus on the jobs.
+                I design, build and ship complete products: SaaS platforms, AI-powered automations and the
+                cloud infrastructure that runs them. One developer, end to end, so nothing gets lost
+                between teams.
               </p>
 
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -197,10 +197,10 @@ const Services = () => {
                   <FaArrowRight className="text-sm" aria-hidden="true" />
                 </a>
                 <a
-                  href="/#plumbing-projects"
+                  href="/#projects"
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-7 py-3 font-semibold text-white transition duration-300 hover:border-white/40 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF7E29]/80"
                 >
-                  See plumbing websites
+                  See my projects
                 </a>
               </div>
             </div>
@@ -208,17 +208,17 @@ const Services = () => {
             <div>
               <div className="grid grid-cols-2 gap-3">
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-                  <p className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">6</p>
-                  <p className="mt-1 text-xs font-medium text-slate-400 md:text-sm">Plumbing websites live</p>
+                  <p className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">100+</p>
+                  <p className="mt-1 text-xs font-medium text-slate-400 md:text-sm">Production web apps delivered</p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-                  <p className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">3</p>
-                  <p className="mt-1 text-xs font-medium text-slate-400 md:text-sm">Countries · USA, Canada, UK</p>
+                  <p className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">6</p>
+                  <p className="mt-1 text-xs font-medium text-slate-400 md:text-sm">Years of professional experience</p>
                 </div>
               </div>
 
-              <ul className="mt-4 flex flex-wrap gap-2" aria-label="Digital services for plumbing companies">
-                {PLUMBING_SERVICES.map((service) => (
+              <ul className="mt-4 flex flex-wrap gap-2" aria-label="What I can build for you">
+                {CAPABILITIES.map((service) => (
                   <li
                     key={service}
                     className="rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-xs font-medium text-slate-200 transition duration-300 hover:border-[#FF7E29]/50 hover:bg-[#FF7E29]/15 hover:text-white"

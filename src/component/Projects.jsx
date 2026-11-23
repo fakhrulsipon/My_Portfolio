@@ -1,12 +1,11 @@
 import { motion as Motion } from "framer-motion";
-import { FaArrowRight, FaLayerGroup, FaMapMarkerAlt, FaWrench } from "react-icons/fa";
+import { FaArrowRight, FaLayerGroup } from "react-icons/fa";
 import ProjectCard from "./ProjectCard";
 import { PROJECT_CATEGORIES } from "../data/projects";
 
 // Per-category icons: `icon` for the group header, `tagIcon` for the chip on each card image
 const CATEGORY_UI = {
   saas: { icon: FaLayerGroup, tagIcon: FaLayerGroup },
-  plumbing: { icon: FaWrench, tagIcon: FaMapMarkerAlt },
 };
 
 const fadeUp = {
@@ -55,12 +54,12 @@ const Projects = () => {
             Featured <span className="text-gradient-primary">Projects</span>
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-slate-600 md:text-base">
-            From full-scale SaaS platforms to lead-generating websites for plumbing companies — real
-            products, live in production.
+            Full-scale SaaS platforms I designed, built and shipped end to end — real products, live in
+            production.
           </p>
         </div>
 
-        {/* All categories, in order: SaaS first, then plumbing */}
+        {/* All categories, in array order */}
         <div className="space-y-14 md:space-y-20">
           {PROJECT_CATEGORIES.map((category, index) => (
             <div key={category.id} id={`${category.id}-projects`}>
@@ -88,7 +87,7 @@ const Projects = () => {
         {/* Closing CTA */}
         <div className="mt-12 flex flex-col items-center justify-center gap-3 text-center sm:flex-row md:mt-16">
           <p className="text-sm font-medium text-slate-600 md:text-base">
-            Have a SaaS idea or a plumbing business ready to grow? Let's build it.
+            Have a SaaS idea or a product in mind? Let's build it together.
           </p>
           <a href="/#contact" className="btn-gradient-pill gap-2 px-6 py-2.5 text-sm">
             Start a project

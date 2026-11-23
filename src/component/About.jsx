@@ -26,7 +26,7 @@ const About = () => {
           <p className="mb-7 text-base md:text-lg leading-8 text-slate-700">
             <span className="font-semibold text-[#0F172A]">Senior Full Stack Developer 💻</span> |{" "}
             <span className="font-semibold text-[#0F172A]">AI Automation Expert 🤖</span> |{" "}
-            <span className="font-semibold text-[#0F172A]">Plumbing Digital Partner 🔧</span>
+            <span className="font-semibold text-[#0F172A]">DevOps & Cloud ☁️</span>
           </p>
 
           <div className="relative mx-auto inline-block w-full max-w-xl rounded-3xl p-1">
@@ -54,10 +54,10 @@ const About = () => {
                 automated systems.
               </p>
               <p>
-                I also specialize in the{" "}
-                <span className="font-semibold text-[#0F172A]">plumbing industry</span>. From
-                high-converting websites and local SEO to online booking, AI call answering and
-                automated lead follow-up, I help plumbing companies get more calls and book more jobs.
+                From system architecture and APIs to{" "}
+                <span className="font-semibold text-[#0F172A]">AI-powered workflows</span> and
+                automated CI/CD deployments, I take products from idea to production — and keep
+                them fast, secure and scalable.
               </p>
             </div>
           </div>
