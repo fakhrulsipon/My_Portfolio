@@ -1,5 +1,5 @@
 import { motion as Motion } from "framer-motion";
-import { FaArrowRight, FaCheck, FaCloud, FaLaptopCode, FaRobot, FaRocket, FaStar } from "react-icons/fa";
+import { FaCheck, FaCloud, FaLaptopCode, FaRobot, FaStar } from "react-icons/fa";
 
 const PILLARS = [
   {
@@ -42,19 +42,6 @@ const PILLARS = [
       "Monitoring, security & uptime",
     ],
   },
-];
-
-const CAPABILITIES = [
-  "SaaS platforms",
-  "Web applications",
-  "AI chatbots & voice agents",
-  "Workflow automation",
-  "LLM & RAG integrations",
-  "REST APIs",
-  "Docker & CI/CD",
-  "AWS deployments",
-  "Performance optimization",
-  "UI/UX implementation",
 ];
 
 const fadeUp = {
@@ -156,80 +143,6 @@ const Services = () => {
             </Motion.div>
           ))}
         </div>
-
-        {/* Work-together banner */}
-        <Motion.div
-          className="relative mt-6 overflow-hidden rounded-[2rem] bg-[#0F172A] p-6 text-white shadow-[0_30px_60px_-30px_rgba(15,23,42,0.6)] sm:p-8 md:mt-8 lg:p-12"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.65, ease: "easeOut" }}
-        >
-          {/* Ambient glows + grid texture */}
-          <div aria-hidden="true" className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-[#FF7E29]/30 blur-3xl" />
-          <div aria-hidden="true" className="pointer-events-none absolute -bottom-28 right-0 h-80 w-80 rounded-full bg-[#FF3E6C]/25 blur-3xl" />
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:48px_48px]"
-          />
-
-          <div className="relative grid items-center gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-14">
-            <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-[#FF7E29]/40 bg-[#FF7E29]/15 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#FFB27F]">
-                <FaRocket aria-hidden="true" /> Let&apos;s work together
-              </span>
-              <h3 className="mt-4 text-2xl font-bold leading-tight tracking-tight sm:text-3xl lg:text-4xl">
-                From idea to production,{" "}
-                <span className="bg-gradient-to-r from-[#FF9A5A] via-[#FF6B5B] to-[#FF5A82] bg-clip-text text-transparent">
-                  built to scale
-                </span>
-              </h3>
-              <p className="mt-4 max-w-xl text-sm leading-7 text-slate-300 md:text-base">
-                I design, build and ship complete products: SaaS platforms, AI-powered automations and the
-                cloud infrastructure that runs them. One developer, end to end, so nothing gets lost
-                between teams.
-              </p>
-
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <a href="/#contact" className="btn-gradient-pill gap-2 focus-visible:ring-offset-[#0F172A]">
-                  Get a free consultation
-                  <FaArrowRight className="text-sm" aria-hidden="true" />
-                </a>
-                <a
-                  href="/#projects"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-7 py-3 font-semibold text-white transition duration-300 hover:border-white/40 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF7E29]/80"
-                >
-                  See my projects
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <div className="grid grid-cols-2 gap-3">
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-                  <p className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">100+</p>
-                  <p className="mt-1 text-xs font-medium text-slate-400 md:text-sm">Production web apps delivered</p>
-                </div>
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-                  <p className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">6</p>
-                  <p className="mt-1 text-xs font-medium text-slate-400 md:text-sm">Years of professional experience</p>
-                </div>
-              </div>
-
-              <ul className="mt-4 flex flex-wrap gap-2" aria-label="What I can build for you">
-                {CAPABILITIES.map((service) => (
-                  <li
-                    key={service}
-                    className="rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-xs font-medium text-slate-200 transition duration-300 hover:border-[#FF7E29]/50 hover:bg-[#FF7E29]/15 hover:text-white"
-                  >
-                    {service}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </Motion.div>
       </div>
     </div>
   );
